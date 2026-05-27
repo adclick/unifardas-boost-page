@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { Toaster } from "sonner";
+import { CookieConsent } from "@/components/landing/CookieConsent";
 
 import appCss from "../styles.css?url";
 
@@ -117,6 +118,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Toaster position="top-center" richColors closeButton />
+      <CookieConsent />
     </QueryClientProvider>
   );
 }
