@@ -49,11 +49,11 @@ export function SectorMosaic() {
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-4">
-          <Tile src={hotelaria} label="Hotelaria" aspect="aspect-[3/4]" width={600} height={800} />
+          <Tile src={hotelaria} label="Saúde" aspect="aspect-[3/4]" width={600} height={800} />
           <Tile src={industria} label="Indústria" aspect="aspect-[3/2]" width={600} height={400} />
         </div>
         <div className="space-y-4 pt-12">
-          <Tile src={saude} label="Saúde" aspect="aspect-square" width={600} height={600} />
+          <Tile src={saude} label="Hotelaria" aspect="aspect-square" width={600} height={600} />
           <Tile src={corporate} label="Corporate" aspect="aspect-[3/4]" width={600} height={800} />
         </div>
       </div>

@@ -33,17 +33,17 @@ function LandingPage() {
     <div className="min-h-screen bg-background font-sans text-neutral-900 selection:bg-brand-red selection:text-white">
       <LandingHeader />
       <main className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="py-12 lg:py-24">
+          <div className="mx-auto max-w-xl">
+            <QuoteForm />
+          </div>
+        </div>
         <div className="lg:grid lg:grid-cols-12 lg:gap-16">
-          <div className="py-12 lg:col-span-7 lg:py-24">
+          <div className="py-12 lg:col-span-12 lg:py-24">
             <Hero />
             <Benefits />
             <SectorMosaic />
             <SocialProof />
-          </div>
-          <div className="relative py-12 lg:col-span-5 lg:py-24">
-            <div className="sticky top-24">
-              <QuoteForm />
-            </div>
           </div>
         </div>
       </main>
