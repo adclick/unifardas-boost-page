@@ -45,6 +45,7 @@ function LandingPage() {
             <Benefits />
             <SectorMosaic />
             <SocialProof />
+            <TestimonialsCarousel />
           </div>
         </div>
       </main>
