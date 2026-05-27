@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { Toaster } from "sonner";
+import { CookieConsent } from "@/components/landing/CookieConsent";
 
 import appCss from "../styles.css?url";
 
