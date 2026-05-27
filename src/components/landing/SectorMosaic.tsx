@@ -39,7 +39,8 @@ export function SectorMosaic() {
   return (
     <section className="mt-24">
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold tracking-tight text-brand-black">
+        <span className="text-xs font-semibold uppercase tracking-widest text-brand-red">Setores</span>
+        <h2 className="mt-2 text-2xl font-semibold tracking-tight text-brand-black">
           Sectores que vestimos
         </h2>
         <p className="mt-2 text-sm text-neutral-600">
@@ -55,6 +56,22 @@ export function SectorMosaic() {
           <Tile src={saude} label="Saúde" aspect="aspect-square" width={600} height={600} />
           <Tile src={corporate} label="Corporate" aspect="aspect-[3/4]" width={600} height={800} />
         </div>
+      </div>
+      <div className="mt-10 flex flex-col items-start gap-4 rounded-sm bg-brand-black p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div>
+          <p className="text-base font-semibold text-white sm:text-lg">
+            O seu setor não está listado?
+          </p>
+          <p className="mt-1 text-sm text-zinc-400">
+            Produzimos por medida para qualquer atividade profissional.
+          </p>
+        </div>
+        <a
+          href="#orcamento"
+          className="inline-flex shrink-0 items-center gap-2 rounded-sm bg-brand-red px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-brand-red/30 transition-all hover:bg-brand-red/90 active:scale-[0.98]"
+        >
+          Falar connosco
+        </a>
       </div>
     </section>
   );
