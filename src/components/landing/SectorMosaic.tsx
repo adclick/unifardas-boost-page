@@ -70,7 +70,7 @@ export function SectorMosaic() {
           href="#orcamento"
           className="inline-flex shrink-0 items-center gap-2 rounded-sm bg-brand-red px-5 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-brand-red/30 transition-all hover:bg-brand-red/90 active:scale-[0.98]"
         >
-          Falar connosco
+          Pedir orçamento
         </a>
       </div>
     </section>

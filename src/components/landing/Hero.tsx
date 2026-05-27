@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -14,20 +14,13 @@ export function Hero() {
         Desenhamos e produzimos uniformes técnicos que combinam durabilidade industrial com o corte de
         alfaiataria. Proteja a sua equipa com imagem e conforto.
       </p>
-      <div className="mt-10 flex flex-wrap items-center gap-4">
+      <div className="mt-10">
         <a
           href="#orcamento"
           className="inline-flex items-center justify-center gap-2 rounded-sm bg-brand-red px-6 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-brand-red/30 transition-all hover:bg-brand-red/90 hover:shadow-xl hover:shadow-brand-red/40 active:scale-[0.98]"
         >
           Pedir orçamento gratuito
           <ArrowRight className="size-4" />
-        </a>
-        <a
-          href="tel:+351000000000"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-brand-black hover:text-brand-red transition-colors"
-        >
-          <Phone className="size-4" />
-          Falar com especialista
         </a>
       </div>
     </section>
