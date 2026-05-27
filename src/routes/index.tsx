@@ -4,6 +4,7 @@ import { Hero } from "@/components/landing/Hero";
 import { Benefits } from "@/components/landing/Benefits";
 import { SectorMosaic } from "@/components/landing/SectorMosaic";
 import { SocialProof } from "@/components/landing/SocialProof";
+import { TestimonialsCarousel } from "@/components/landing/TestimonialsCarousel";
 import { QuoteForm } from "@/components/landing/QuoteForm";
 import { LandingFooter } from "@/components/landing/Footer";
 
@@ -44,6 +45,7 @@ function LandingPage() {
             <Benefits />
             <SectorMosaic />
             <SocialProof />
+            <TestimonialsCarousel />
           </div>
         </div>
       </main>
