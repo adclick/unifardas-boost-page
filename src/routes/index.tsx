@@ -35,7 +35,7 @@ function LandingPage() {
     <div className="min-h-screen bg-background font-sans text-neutral-900 selection:bg-brand-red selection:text-white">
       <LandingHeader />
       <main className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="py-12 lg:grid lg:grid-cols-12 lg:gap-12 lg:py-20">
+        <div className="flex flex-col-reverse gap-10 py-12 lg:grid lg:grid-cols-12 lg:gap-12 lg:py-20">
           <div className="lg:col-span-7">
             <div className="relative h-72 overflow-hidden rounded-sm ring-1 ring-black/5 sm:h-96 lg:h-full lg:min-h-[640px]">
               <img
@@ -56,7 +56,7 @@ function LandingPage() {
               </div>
             </div>
           </div>
-          <div className="mt-10 lg:col-span-5 lg:mt-0">
+          <div className="lg:col-span-5">
             <QuoteForm />
           </div>
         </div>
