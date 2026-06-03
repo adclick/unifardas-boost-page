@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingHeader } from "@/components/landing/Header";
-import { Hero } from "@/components/landing/Hero";
+
 import { Benefits } from "@/components/landing/Benefits";
 import { SectorMosaic } from "@/components/landing/SectorMosaic";
 import { SocialProof } from "@/components/landing/SocialProof";
