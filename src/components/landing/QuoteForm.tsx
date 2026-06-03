@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "@tanstack/react-router";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
@@ -26,6 +27,7 @@ type FormValues = z.infer<typeof schema>;
 
 export function QuoteForm() {
   const [submitting, setSubmitting] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -57,6 +59,7 @@ export function QuoteForm() {
     });
     reset();
     setSubmitting(false);
+    navigate({ to: "/obrigado" });
   };
 
   return (
