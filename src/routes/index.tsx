@@ -7,7 +7,9 @@ import { SocialProof } from "@/components/landing/SocialProof";
 import { TestimonialsCarousel } from "@/components/landing/TestimonialsCarousel";
 import { QuoteForm } from "@/components/landing/QuoteForm";
 import { LandingFooter } from "@/components/landing/Footer";
-import heroUniforms from "@/assets/hero-uniforms.jpg";
+import hero640 from "@/assets/hero-640.webp.asset.json";
+import hero1024 from "@/assets/hero-1024.webp.asset.json";
+import heroFull from "@/assets/hero-full.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
