@@ -1,4 +1,4 @@
-import logo from "@/assets/unifardas-logo.png";
+import logo from "@/assets/unifardas-logo-new.png.asset.json";
 import { Plus } from "lucide-react";
 
 export function LandingHeader() {
@@ -6,7 +6,7 @@ export function LandingHeader() {
     <header className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-md ring-1 ring-black/5">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-12">
         <a href="#top" className="flex items-center gap-2">
-          <img src={logo} alt="Unifardas" className="h-9 w-auto" width={36} height={36} />
+          <img src={logo.url} alt="Unifardas" className="h-9 w-auto" width={36} height={36} />
         </a>
         <a
           href="#orcamento"
