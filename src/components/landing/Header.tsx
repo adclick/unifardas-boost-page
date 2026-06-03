@@ -1,4 +1,4 @@
-import logo from "@/assets/unifardas-logo.png";
+import logo from "@/assets/unifardas-logo-new.png.asset.json";
 import { Plus } from "lucide-react";
 
 export function LandingHeader() {
