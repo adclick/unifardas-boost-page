@@ -27,6 +27,7 @@ type FormValues = z.infer<typeof schema>;
 
 export function QuoteForm() {
   const [submitting, setSubmitting] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -58,6 +59,7 @@ export function QuoteForm() {
     });
     reset();
     setSubmitting(false);
+    navigate({ to: "/obrigado" });
   };
 
   return (
