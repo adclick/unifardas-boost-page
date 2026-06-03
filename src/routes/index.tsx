@@ -39,15 +39,19 @@ function LandingPage() {
       <main className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="flex flex-col-reverse gap-10 py-12 lg:grid lg:grid-cols-12 lg:gap-12 lg:py-20">
           <div className="lg:col-span-7">
-            <div className="relative h-72 overflow-hidden rounded-sm ring-1 ring-black/5 sm:h-96 lg:h-full lg:min-h-[640px]">
+            <div className="relative h-72 overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-black/5 sm:h-96 lg:h-full lg:min-h-[640px]">
               <img
-                src={heroUniforms}
-                alt="Fardamento profissional Unifardas"
-                width={1024}
-                height={1280}
-                className="absolute inset-0 size-full object-cover"
+                src={hero1024.url}
+                srcSet={`${hero640.url} 640w, ${hero1024.url} 1024w, ${heroFull.url} 1600w`}
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                alt="Profissionais de saúde com fardamento Unifardas"
+                width={900}
+                height={620}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 size-full object-contain object-bottom"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
                 <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red px-3 py-1.5 text-xs font-semibold tracking-widest text-white uppercase">
                   Produção Nacional
