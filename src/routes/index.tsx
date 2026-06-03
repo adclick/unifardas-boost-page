@@ -36,37 +36,49 @@ function LandingPage() {
   return (
     <div className="min-h-screen bg-background font-sans text-neutral-900 selection:bg-brand-red selection:text-white">
       <LandingHeader />
-      <main className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="flex flex-col-reverse gap-10 py-12 lg:grid lg:grid-cols-12 lg:gap-12 lg:py-20">
-          <div className="lg:col-span-7">
-            <div className="relative h-72 overflow-hidden rounded-sm bg-neutral-100 ring-1 ring-black/5 sm:h-96 lg:h-full lg:min-h-[640px]">
+      <main>
+        {/* Hero full-bleed */}
+        <section className="relative overflow-hidden bg-gradient-to-b from-neutral-100 via-neutral-50 to-white">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 pt-12 pb-0 lg:grid-cols-12 lg:gap-8 lg:px-12 lg:pt-20 lg:pb-24">
+            {/* Left: copy */}
+            <div className="relative z-20 lg:col-span-6 lg:pt-10">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
+                Fardamento Profissional
+              </span>
+              <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-brand-black sm:text-5xl lg:text-6xl">
+                A farda que comunica a <span className="text-brand-red">excelência</span> do seu negócio.
+              </h1>
+              <p className="mt-6 max-w-[46ch] text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg">
+                Produzimos uniformes técnicos com corte de alfaiataria, tecidos certificados e personalização total para a sua equipa.
+              </p>
+            </div>
+
+            {/* Right: form (in-flow on mobile, floating on desktop) */}
+            <div className="relative z-20 lg:col-span-5 lg:col-start-8 lg:-mb-24">
+              <QuoteForm />
+            </div>
+          </div>
+
+          {/* Hero image — full width floating on top, behind copy/form on desktop */}
+          <div className="relative z-10 -mt-6 lg:mt-0 lg:absolute lg:inset-x-0 lg:bottom-0 lg:top-0 lg:pointer-events-none">
+            <div className="mx-auto flex max-w-7xl items-end justify-center lg:h-full lg:justify-start lg:pl-[28%]">
               <img
                 src={hero1024.url}
                 srcSet={`${hero640.url} 640w, ${hero1024.url} 1024w, ${heroFull.url} 1600w`}
-                sizes="(min-width: 1024px) 58vw, 100vw"
-                alt="Profissionais de saúde com fardamento Unifardas"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                alt="Profissionais com fardamento Unifardas"
                 width={900}
                 height={620}
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
                 decoding="async"
-                className="absolute inset-0 size-full object-contain object-bottom"
+                className="h-auto w-full max-w-md object-contain object-bottom sm:max-w-lg lg:max-w-[640px] lg:translate-y-0 xl:max-w-[720px]"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
-                <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red px-3 py-1.5 text-xs font-semibold tracking-widest text-white uppercase">
-                  Produção Nacional
-                </span>
-                <h2 className="mt-4 max-w-md text-balance text-2xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl">
-                  A farda que comunica a excelência do seu negócio.
-                </h2>
-              </div>
             </div>
           </div>
-          <div className="lg:col-span-5">
-            <QuoteForm />
-          </div>
-        </div>
-        <div className="py-12 lg:py-20">
+        </section>
+
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-12 lg:py-24">
           <Hero />
           <Benefits />
           <SectorMosaic />
@@ -78,3 +90,4 @@ function LandingPage() {
     </div>
   );
 }
+
