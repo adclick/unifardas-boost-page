@@ -21,7 +21,7 @@ const items = [
   },
   {
     icon: responseIcon,
-    title: "Resposta rápida",
+    title: "Acompanhamento próximo",
     desc: "Orçamentos ágeis e acompanhamento dedicado desde o primeiro contacto até à entrega final.",
   },
 ];
