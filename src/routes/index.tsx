@@ -65,21 +65,29 @@ function LandingPage() {
                 <span className="text-brand-red-bright">valorizam a imagem</span>{" "}
                 da sua empresa e acompanham o ritmo do seu negócio.
               </h1>
-              <p className="mt-7 max-w-[55ch] text-pretty text-base leading-relaxed text-white/85 sm:text-lg">
+              <p className="mt-10 max-w-[55ch] text-pretty text-lg leading-relaxed text-white/85 sm:text-xl">
                 Uniformes à medida com tecidos de alta qualidade, personalização
                 completa e entrega rápida em Portugal continental e ilhas.
               </p>
-              <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/80">
-                <div className="flex items-center gap-2">
-                  <span className="block h-px w-8 bg-brand-red-bright" />
+              <div className="mt-8">
+                <a
+                  href="#top"
+                  className="inline-flex items-center justify-center bg-brand-red px-8 py-3 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-bright"
+                >
+                  Solicitar orçamento gratuito
+                </a>
+              </div>
+              <div className="mt-10 flex flex-wrap items-center gap-3 text-sm text-white/90">
+                <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
+                  <span className="block h-px w-6 bg-brand-red-bright" />
                   <span className="font-semibold uppercase tracking-widest">+30 anos</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="block h-px w-8 bg-brand-red-bright" />
+                <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
+                  <span className="block h-px w-6 bg-brand-red-bright" />
                   <span className="font-semibold uppercase tracking-widest">Produção nacional</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="block h-px w-8 bg-brand-red-bright" />
+                <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
+                  <span className="block h-px w-6 bg-brand-red-bright" />
                   <span className="font-semibold uppercase tracking-widest">Resposta 24h</span>
                 </div>
               </div>
