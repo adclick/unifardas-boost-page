@@ -43,7 +43,7 @@ export function Benefits() {
             <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
             Vantagens
           </span>
-          <h2 className="mt-4 text-[56px] font-semibold leading-tight tracking-tight text-brand-black">
+          <h2 className="mt-4 text-[40px] font-semibold leading-tight tracking-tight text-brand-black">
             Porquê escolher a Unifardas?
           </h2>
         </div>
@@ -55,7 +55,7 @@ export function Benefits() {
               className="group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
             >
               <img src={icon} alt={alt} className="h-14 w-14" aria-hidden />
-              <h3 className="mt-6 text-2xl font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">
+              <h3 className="mt-6 text-[32px] font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">
                 {title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-brand-gray transition-colors group-hover:text-white/80">

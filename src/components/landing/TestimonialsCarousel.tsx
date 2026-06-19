@@ -46,7 +46,7 @@ export function TestimonialsCarousel() {
             <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
             Depoimentos
           </span>
-          <h2 className="mt-2 text-[56px] font-semibold tracking-tight text-brand-black">
+          <h2 className="mt-2 text-[40px] font-semibold tracking-tight text-brand-black">
             O que os nossos clientes dizem
           </h2>
         </div>
