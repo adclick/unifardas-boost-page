@@ -62,13 +62,19 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-brand-black: var(--brand-black);
   --color-brand-red: var(--brand-red);
+  --color-brand-red-bright: var(--brand-red-bright);
+  --color-brand-gray: var(--brand-gray);
+  --color-brand-light: var(--brand-light);
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.25rem;
-  --brand-black: oklch(0.205 0 0);
-  --brand-red: oklch(0.555 0.22 27);
+  --radius: 0rem;
+  --brand-black: #484848;
+  --brand-red: #d94350;
+  --brand-red-bright: #ff5757;
+  --brand-gray: #5d5d5d;
+  --brand-light: #efefef;
   --background: oklch(0.985 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);

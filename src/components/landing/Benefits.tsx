@@ -1,40 +1,63 @@
-import { Factory, Clock, Scissors, ShieldCheck } from "lucide-react";
+import { Factory, Palette, ShieldCheck, Zap } from "lucide-react";
 
 const items = [
   {
     icon: Factory,
-    title: "Produção Própria",
-    desc: "Controlo total de qualidade desde o fio à costura final em território nacional.",
+    title: "Produção nacional",
+    desc: "Controlo rigoroso de qualidade em todas as fases do processo, garantindo elevados padrões de fabrico.",
   },
   {
-    icon: Clock,
-    title: "Prazos Rigorosos",
-    desc: "Logística otimizada para garantir que a sua equipa nunca fica sem fardamento.",
-  },
-  {
-    icon: Scissors,
-    title: "Personalização Total",
-    desc: "Bordados, estampagem e cortes à medida com a identidade da sua marca.",
+    icon: Palette,
+    title: "Personalização à medida",
+    desc: "Adaptamos cada peça à identidade da sua empresa através de bordados, estampagem, sublimação ou transfer.",
   },
   {
     icon: ShieldCheck,
-    title: "Tecidos Certificados",
-    desc: "Materiais resistentes, confortáveis e em conformidade com normas técnicas.",
+    title: "Qualidade e durabilidade",
+    desc: "Tecidos resistentes e confortáveis, preparados para utilização intensiva no dia a dia profissional.",
+  },
+  {
+    icon: Zap,
+    title: "Resposta rápida",
+    desc: "Orçamentos ágeis e acompanhamento dedicado desde o primeiro contacto até à entrega final.",
   },
 ];
 
 export function Benefits() {
   return (
-    <section className="mt-20 grid gap-8 sm:grid-cols-2">
-      {items.map(({ icon: Icon, title, desc }) => (
-        <div key={title} className="group relative pl-5 border-l-2 border-neutral-200 transition-colors hover:border-brand-red">
-          <div className="mb-4 flex size-10 items-center justify-center rounded-sm bg-brand-red/10 ring-1 ring-brand-red/20 transition-colors group-hover:bg-brand-red group-hover:ring-brand-red">
-            <Icon className="size-4 text-brand-red shrink-0 transition-colors group-hover:text-white" strokeWidth={2.5} />
-          </div>
-          <h3 className="text-base font-semibold text-brand-black">{title}</h3>
-          <p className="mt-2 max-w-[35ch] text-pretty text-sm text-neutral-600">{desc}</p>
+    <section id="solucoes" className="bg-brand-light py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-red">
+            Vantagens
+          </span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-brand-black sm:text-4xl lg:text-5xl">
+            Porquê escolher a Unifardas?
+          </h2>
         </div>
-      ))}
+
+        <div className="mt-16 grid gap-px bg-brand-black/10 sm:grid-cols-2 lg:grid-cols-4">
+          {items.map(({ icon: Icon, title, desc }, i) => (
+            <div
+              key={title}
+              className="group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
+            >
+              <span className="text-xs font-bold text-brand-red">
+                0{i + 1}
+              </span>
+              <div className="mt-4 inline-flex size-14 items-center justify-center bg-brand-red text-white">
+                <Icon className="size-7" strokeWidth={1.75} />
+              </div>
+              <h3 className="mt-6 text-lg font-bold tracking-tight text-brand-black transition-colors group-hover:text-white">
+                {title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-brand-gray transition-colors group-hover:text-white/80">
+                {desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

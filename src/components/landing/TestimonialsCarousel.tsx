@@ -37,7 +37,9 @@ export function TestimonialsCarousel() {
   }, [emblaApi]);
 
   return (
-    <section className="mt-24">
+    <section id="reviews" className="bg-brand-light py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+
       <div className="mb-8 flex items-end justify-between">
         <div>
           <span className="text-xs font-semibold uppercase tracking-widest text-brand-red">
@@ -134,6 +136,8 @@ export function TestimonialsCarousel() {
           <ArrowRight className="size-4" />
         </a>
       </div>
+      </div>
     </section>
   );
 }
+
