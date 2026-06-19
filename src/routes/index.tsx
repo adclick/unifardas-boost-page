@@ -60,7 +60,7 @@ function LandingPage() {
               <span className="inline-flex items-center gap-2 bg-brand-red px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
                 Fardas profissionais personalizadas
               </span>
-              <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-6 text-balance text-3xl font-bold leading-[1.05] tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Fardas profissionais que{" "}
                 <span className="text-brand-red-bright">valorizam a imagem</span>{" "}
                 da sua empresa e acompanham o ritmo do seu negócio.
