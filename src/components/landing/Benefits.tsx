@@ -40,44 +40,20 @@ export function Benefits() {
         </div>
 
         <div className="mt-16 grid gap-px bg-brand-black/10 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map(({ icon, title, desc }, i) => {
-            const featured = i === 0;
-            return (
-              <div
-                key={title}
-                className={
-                  featured
-                    ? "group relative flex flex-col bg-brand-black p-8 ring-2 ring-brand-red"
-                    : "group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
-                }
-              >
-                {featured && (
-                  <span className="mb-4 inline-flex w-fit items-center gap-2 bg-brand-red px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white">
-                    Destaque
-                  </span>
-                )}
-                <img src={icon} alt={title} className="h-14 w-14" aria-hidden />
-                <h3
-                  className={
-                    featured
-                      ? "mt-6 text-2xl font-extrabold leading-tight text-white"
-                      : "mt-6 text-2xl font-extrabold leading-tight text-brand-black transition-colors group-hover:text-white"
-                  }
-                >
-                  {title}
-                </h3>
-                <p
-                  className={
-                    featured
-                      ? "mt-3 text-sm leading-relaxed text-white/80"
-                      : "mt-3 text-sm leading-relaxed text-brand-gray transition-colors group-hover:text-white/80"
-                  }
-                >
-                  {desc}
-                </p>
-              </div>
-            );
-          })}
+          {items.map(({ icon, title, desc }) => (
+            <div
+              key={title}
+              className="group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
+            >
+              <img src={icon} alt={title} className="h-14 w-14" aria-hidden />
+              <h3 className="mt-6 text-2xl font-light leading-tight text-brand-black transition-colors group-hover:text-white">
+                {title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-brand-gray transition-colors group-hover:text-white/80">
+                {desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
