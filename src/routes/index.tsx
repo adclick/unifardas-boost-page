@@ -1,30 +1,27 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingHeader } from "@/components/landing/Header";
-
 import { Benefits } from "@/components/landing/Benefits";
 import { SectorMosaic } from "@/components/landing/SectorMosaic";
 import { SocialProof } from "@/components/landing/SocialProof";
 import { TestimonialsCarousel } from "@/components/landing/TestimonialsCarousel";
 import { QuoteForm } from "@/components/landing/QuoteForm";
 import { LandingFooter } from "@/components/landing/Footer";
-import hero640 from "@/assets/hero-640.webp.asset.json";
-import hero1024 from "@/assets/hero-1024.webp.asset.json";
-import heroFull from "@/assets/hero-full.webp.asset.json";
+import heroBg from "@/assets/hero-bg-ocean.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Unifardas — Fardamento Profissional | Pedir Orçamento" },
+      { title: "Unifardas — Fardas Profissionais Personalizadas | Orçamento" },
       {
         name: "description",
         content:
-          "Unifardas: vestuário profissional premium para hotelaria, saúde, indústria e corporate. Peça o seu orçamento em menos de 24 horas.",
+          "Uniformes à medida com tecidos de alta qualidade, personalização completa e entrega rápida em Portugal continental e ilhas.",
       },
-      { property: "og:title", content: "Unifardas — Fardamento Profissional" },
+      { property: "og:title", content: "Unifardas — Fardas Profissionais Personalizadas" },
       {
         property: "og:description",
         content:
-          "Fardas técnicas, duráveis e personalizadas. Produção nacional. Peça orçamento.",
+          "Fardas que valorizam a imagem da sua empresa. Produção nacional, personalização total e resposta em 24h.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -34,60 +31,73 @@ export const Route = createFileRoute("/")({
 
 function LandingPage() {
   return (
-    <div className="min-h-screen bg-background font-sans text-neutral-900 selection:bg-brand-red selection:text-white">
+    <div
+      id="top"
+      className="min-h-screen bg-background font-sans text-brand-black selection:bg-brand-red selection:text-white"
+    >
       <LandingHeader />
-      <main>
-        {/* Hero full-bleed */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-neutral-100 via-neutral-50 to-white">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 pt-12 pb-0 lg:grid-cols-12 lg:gap-8 lg:px-12 lg:pt-20 lg:pb-24">
-            {/* Left: copy */}
-            <div className="relative z-20 lg:col-span-6 lg:pt-10">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red">
-                Fardamento Profissional
-              </span>
-              <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-brand-black sm:text-5xl lg:text-6xl">
-                A farda que comunica a <span className="text-brand-red">excelência</span> do seu negócio.
-              </h1>
-              <p className="mt-6 max-w-[46ch] text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg">
-                Produzimos uniformes técnicos com corte de alfaiataria, tecidos certificados e personalização total para a sua equipa.
-              </p>
-            </div>
-
-            {/* Right: form (in-flow on mobile, floating on desktop) */}
-            <div className="relative z-20 lg:col-span-5 lg:col-start-8 lg:-mb-24">
-              <QuoteForm />
-            </div>
+      <main className="pt-20">
+        {/* HERO with background image */}
+        <section className="relative isolate overflow-hidden">
+          {/* bg image */}
+          <div className="absolute inset-0 -z-10">
+            <img
+              src={heroBg.url}
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-cover"
+              loading="eager"
+              fetchPriority="high"
+            />
+            {/* overlay to keep copy legible */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent" />
           </div>
 
-          {/* Hero image — full width floating on top, behind copy/form on desktop */}
-          <div className="relative z-10 -mt-6 lg:mt-0 lg:absolute lg:inset-x-0 lg:bottom-0 lg:top-0 lg:pointer-events-none">
-            <div className="mx-auto flex max-w-7xl items-end justify-center lg:h-full lg:justify-start lg:pl-[28%]">
-              <img
-                src={hero1024.url}
-                srcSet={`${hero640.url} 640w, ${hero1024.url} 1024w, ${heroFull.url} 1600w`}
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                alt="Profissionais com fardamento Unifardas"
-                width={900}
-                height={620}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                className="h-auto w-full max-w-md object-contain object-bottom sm:max-w-lg lg:max-w-[640px] lg:translate-y-0 xl:max-w-[720px]"
-              />
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 pt-20 pb-24 lg:grid-cols-12 lg:gap-12 lg:px-12 lg:pt-32 lg:pb-36">
+            {/* Left: copy */}
+            <div className="lg:col-span-7 text-white">
+              <span className="inline-flex items-center gap-2 bg-brand-red px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
+                Fardas profissionais personalizadas
+              </span>
+              <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Fardas profissionais que{" "}
+                <span className="text-brand-red-bright">valorizam a imagem</span>{" "}
+                da sua empresa e acompanham o ritmo do seu negócio.
+              </h1>
+              <p className="mt-7 max-w-[55ch] text-pretty text-base leading-relaxed text-white/85 sm:text-lg">
+                Uniformes à medida com tecidos de alta qualidade, personalização
+                completa e entrega rápida em Portugal continental e ilhas.
+              </p>
+              <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/80">
+                <div className="flex items-center gap-2">
+                  <span className="block h-px w-8 bg-brand-red-bright" />
+                  <span className="font-semibold uppercase tracking-widest">+30 anos</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="block h-px w-8 bg-brand-red-bright" />
+                  <span className="font-semibold uppercase tracking-widest">Produção nacional</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="block h-px w-8 bg-brand-red-bright" />
+                  <span className="font-semibold uppercase tracking-widest">Resposta 24h</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: form */}
+            <div className="lg:col-span-5">
+              <QuoteForm />
             </div>
           </div>
         </section>
 
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-12 lg:py-24">
-          
-          <Benefits />
-          <SectorMosaic />
-          <SocialProof />
-          <TestimonialsCarousel />
-        </div>
+        <Benefits />
+        <SectorMosaic />
+        <SocialProof />
+        <TestimonialsCarousel />
       </main>
       <LandingFooter />
     </div>
   );
 }
-
