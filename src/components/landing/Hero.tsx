@@ -7,7 +7,7 @@ export function Hero() {
         <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
         Vestuário Profissional Premium
       </span>
-      <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-brand-black sm:text-5xl lg:text-6xl">
+      <h1 className="text-balance text-[56px] font-semibold leading-tight tracking-tight text-brand-black">
         A farda que comunica a <span className="text-brand-red">excelência</span> do seu negócio.
       </h1>
       <p className="mt-8 max-w-[48ch] text-pretty text-lg leading-relaxed text-neutral-600">
