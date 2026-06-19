@@ -42,7 +42,8 @@ export function TestimonialsCarousel() {
 
       <div className="mb-8 flex items-end justify-between">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-widest text-brand-red">
+          <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/20">
+            <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
             Depoimentos
           </span>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-brand-black">

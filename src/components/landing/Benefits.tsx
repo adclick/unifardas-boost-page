@@ -6,22 +6,22 @@ import responseIcon from "@/assets/icons/response.svg";
 const items = [
   {
     icon: productionIcon,
-    title: "Produção nacional",
+    title: <>Produção<br />nacional</>,
     desc: "Controlo rigoroso de qualidade em todas as fases do processo, garantindo elevados padrões de fabrico.",
   },
   {
     icon: customIcon,
-    title: "Personalização à medida",
+    title: <>Personalização<br />à medida</>,
     desc: "Adaptamos cada peça à identidade da sua empresa através de bordados, estampagem, sublimação ou transfer.",
   },
   {
     icon: qualityIcon,
-    title: "Qualidade e durabilidade",
+    title: <>Qualidade e<br />durabilidade</>,
     desc: "Tecidos resistentes e confortáveis, preparados para utilização intensiva no dia a dia profissional.",
   },
   {
     icon: responseIcon,
-    title: "Acompanhamento próximo",
+    title: <>Acompanhamento<br />próximo</>,
     desc: "Orçamentos ágeis e acompanhamento dedicado desde o primeiro contacto até à entrega final.",
   },
 ];
@@ -31,10 +31,11 @@ export function Benefits() {
     <section id="solucoes" className="bg-brand-light py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-red">
+          <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/20">
+            <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
             Vantagens
           </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-brand-black sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-brand-black sm:text-5xl lg:text-6xl">
             Porquê escolher a Unifardas?
           </h2>
         </div>
