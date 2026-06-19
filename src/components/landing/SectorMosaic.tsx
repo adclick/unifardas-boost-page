@@ -25,7 +25,7 @@ export function SectorMosaic() {
               <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
               Setores
             </span>
-            <h2 className="mt-4 text-[56px] font-bold tracking-tight text-brand-black">
+            <h2 className="mt-4 text-[40px] font-bold tracking-tight text-brand-black">
               Setores que vestimos
             </h2>
           </div>
@@ -63,7 +63,7 @@ export function SectorMosaic() {
         {/* CTA Block */}
         <div className="mt-16 flex flex-col items-start gap-6 bg-brand-black p-8 sm:flex-row sm:items-center sm:justify-between sm:p-12">
           <div>
-            <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+            <h3 className="text-[32px] font-bold tracking-tight text-white">
               O seu setor não está aqui?
             </h3>
             <p className="mt-3 max-w-xl text-base text-white/75">
