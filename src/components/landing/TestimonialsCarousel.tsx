@@ -136,6 +136,8 @@ export function TestimonialsCarousel() {
           <ArrowRight className="size-4" />
         </a>
       </div>
+      </div>
     </section>
   );
 }
+
