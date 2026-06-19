@@ -5,23 +5,31 @@ import responseIcon from "@/assets/icons/response.svg";
 
 const items = [
   {
+    id: "producao",
     icon: productionIcon,
     title: <>Produção<br />nacional</>,
+    alt: "Produção nacional",
     desc: "Controlo rigoroso de qualidade em todas as fases do processo, garantindo elevados padrões de fabrico.",
   },
   {
+    id: "customizacao",
     icon: customIcon,
     title: <>Personalização<br />à medida</>,
+    alt: "Personalização à medida",
     desc: "Adaptamos cada peça à identidade da sua empresa através de bordados, estampagem, sublimação ou transfer.",
   },
   {
+    id: "qualidade",
     icon: qualityIcon,
     title: <>Qualidade e<br />durabilidade</>,
+    alt: "Qualidade e durabilidade",
     desc: "Tecidos resistentes e confortáveis, preparados para utilização intensiva no dia a dia profissional.",
   },
   {
+    id: "acompanhamento",
     icon: responseIcon,
     title: <>Acompanhamento<br />próximo</>,
+    alt: "Acompanhamento próximo",
     desc: "Orçamentos ágeis e acompanhamento dedicado desde o primeiro contacto até à entrega final.",
   },
 ];
