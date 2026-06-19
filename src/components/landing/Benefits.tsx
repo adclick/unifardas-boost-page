@@ -49,12 +49,12 @@ export function Benefits() {
         </div>
 
         <div className="mt-16 grid gap-px bg-brand-black/10 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map(({ icon, title, desc }) => (
+          {items.map(({ id, icon, title, alt, desc }) => (
             <div
-              key={title}
+              key={id}
               className="group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
             >
-              <img src={icon} alt={title} className="h-14 w-14" aria-hidden />
+              <img src={icon} alt={alt} className="h-14 w-14" aria-hidden />
               <h3 className="mt-6 text-2xl font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">
                 {title}
               </h3>
