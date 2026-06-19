@@ -72,7 +72,8 @@ export function SocialProof() {
       <div ref={ref} className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-red-bright">
+            <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/20 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/30">
+              <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
               Sobre nós
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
