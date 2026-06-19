@@ -76,7 +76,7 @@ export function SocialProof() {
               <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
               Sobre nós
             </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-[56px] font-bold tracking-tight text-white">
               Tradição e exigência no vestuário profissional.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-white/75">

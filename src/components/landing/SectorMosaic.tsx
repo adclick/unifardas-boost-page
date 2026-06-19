@@ -25,7 +25,7 @@ export function SectorMosaic() {
               <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
               Setores
             </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-brand-black sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-[56px] font-bold tracking-tight text-brand-black">
               Setores que vestimos
             </h2>
           </div>

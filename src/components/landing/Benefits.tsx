@@ -43,7 +43,7 @@ export function Benefits() {
             <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
             Vantagens
           </span>
-          <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-brand-black sm:text-5xl lg:text-6xl">
+          <h2 className="mt-4 text-[56px] font-semibold leading-tight tracking-tight text-brand-black">
             Porquê escolher a Unifardas?
           </h2>
         </div>
