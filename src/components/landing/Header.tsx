@@ -1,20 +1,33 @@
-import logo from "@/assets/unifardas-logo-new.png.asset.json";
-import { Plus } from "lucide-react";
+import logo from "@/assets/unifardas-logo-2019.png.asset.json";
+
+const nav = [
+  { href: "#solucoes", label: "Soluções" },
+  { href: "#setores", label: "Setores" },
+  { href: "#reviews", label: "Reviews" },
+];
 
 export function LandingHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur-md ring-1 ring-black/5">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-12">
-        <a href="#top" className="flex items-center gap-2">
-          <img src={logo.url} alt="Unifardas" className="h-9 w-auto" width={36} height={36} />
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md ring-1 ring-black/5">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
+        <a href="#top" className="flex items-center" aria-label="Unifardas">
+          <img
+            src={logo.url}
+            alt="Unifardas"
+            className="h-12 w-auto md:h-14"
+          />
         </a>
-        <a
-          href="#orcamento"
-          className="inline-flex items-center justify-center rounded-sm bg-brand-red py-2 pr-3 pl-2 text-sm font-medium text-white transition-colors hover:bg-brand-red/90 ring-2 ring-brand-red ring-offset-2 ring-offset-background"
-        >
-          <Plus className="mr-1.5 size-4 shrink-0" strokeWidth={2.5} />
-          Pedir orçamento
-        </a>
+        <nav className="flex items-center gap-2 sm:gap-8">
+          {nav.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="relative text-sm font-semibold uppercase tracking-wider text-brand-black transition-colors hover:text-brand-red after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-brand-red after:transition-all hover:after:w-full"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
       </div>
     </header>
   );
