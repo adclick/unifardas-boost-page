@@ -56,25 +56,12 @@ export function Benefits() {
                     Destaque
                   </span>
                 )}
-                <div
-                  className="size-14 bg-brand-red"
-                  style={{
-                    WebkitMaskImage: `url(${icon})`,
-                    maskImage: `url(${icon})`,
-                    WebkitMaskRepeat: "no-repeat",
-                    maskRepeat: "no-repeat",
-                    WebkitMaskPosition: "center",
-                    maskPosition: "center",
-                    WebkitMaskSize: "contain",
-                    maskSize: "contain",
-                  }}
-                  aria-hidden
-                />
+                <img src={icon} alt={title} className="h-14 w-14" aria-hidden />
                 <h3
                   className={
                     featured
-                      ? "mt-6 text-xl font-bold tracking-tight text-white"
-                      : "mt-6 text-lg font-bold tracking-tight text-brand-black transition-colors group-hover:text-white"
+                      ? "mt-6 text-2xl font-extrabold leading-tight text-white"
+                      : "mt-6 text-2xl font-extrabold leading-tight text-brand-black transition-colors group-hover:text-white"
                   }
                 >
                   {title}
