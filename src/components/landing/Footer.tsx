@@ -24,7 +24,7 @@ export function LandingFooter() {
       {/* Certifications strip */}
       <div className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-10 lg:px-12">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">
+          <p className="text-xs font-bold uppercase tracking-[0.05em] text-white/50">
             Certificações
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
