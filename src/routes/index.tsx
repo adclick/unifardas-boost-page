@@ -69,18 +69,18 @@ function LandingPage() {
                 Uniformes à medida com tecidos de alta qualidade, personalização
                 completa e entrega rápida em Portugal continental e ilhas.
               </p>
-              <div className="mt-10 flex flex-wrap items-center gap-3 text-sm text-white/90">
+              <div className="mt-10 flex flex-col items-start gap-3 text-sm text-white/90">
                 <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
                   <span className="block h-px w-6 bg-brand-red-bright" />
-                  <span className="font-semibold uppercase tracking-widest">+30 anos</span>
+                  <span className="font-semibold uppercase">+30 anos</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
                   <span className="block h-px w-6 bg-brand-red-bright" />
-                  <span className="font-semibold uppercase tracking-widest">Produção nacional</span>
+                  <span className="font-semibold uppercase">Produção nacional</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
                   <span className="block h-px w-6 bg-brand-red-bright" />
-                  <span className="font-semibold uppercase tracking-widest">Resposta 24h</span>
+                  <span className="font-semibold uppercase">Resposta 24h</span>
                 </div>
               </div>
             </div>
