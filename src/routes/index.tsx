@@ -57,7 +57,8 @@ function LandingPage() {
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 pt-20 pb-24 lg:grid-cols-12 lg:gap-12 lg:px-12 lg:pt-32 lg:pb-36">
             {/* Left: copy */}
             <div className="lg:col-span-7 text-white">
-              <span className="inline-flex items-center gap-2 bg-brand-red px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
+              <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
+                <span className="size-1.5 rounded-full bg-white animate-pulse" />
                 Fardas profissionais personalizadas
               </span>
               <h1 className="mt-6 text-balance text-[48px] font-bold leading-[1.05] tracking-tight text-white">
