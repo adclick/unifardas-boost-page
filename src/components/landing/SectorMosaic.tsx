@@ -61,7 +61,7 @@ export function SectorMosaic() {
         </div>
 
         {/* CTA Block */}
-        <div className="mt-16 flex flex-col items-start gap-6 bg-brand-black p-8 sm:flex-row sm:items-center sm:justify-between sm:p-12">
+        <div className="mt-16 flex flex-col items-start gap-6 bg-brand-red p-8 sm:flex-row sm:items-center sm:justify-between sm:p-12">
           <div>
             <h3 className="text-[32px] font-bold tracking-tight text-white">
               O seu setor não está aqui?
@@ -72,7 +72,7 @@ export function SectorMosaic() {
           </div>
           <a
             href="#orcamento"
-            className="inline-flex shrink-0 items-center gap-2 bg-brand-red px-7 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-brand-red-bright active:scale-[0.98]"
+            className="inline-flex shrink-0 items-center gap-2 border border-white/30 bg-white/15 px-7 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-white/25 active:scale-[0.98]"
           >
             Pedir orçamento <ArrowRight className="size-4" />
           </a>
