@@ -1,11 +1,13 @@
 import logoAsset from "@/assets/unifardas-logo-2019.png.asset.json";
-import { Award, BadgeCheck, Leaf } from "lucide-react";
+import oekoTexAsset from "@/assets/cert-oeko-tex.jpeg.asset.json";
+import isoAsset from "@/assets/cert-iso-9001.png.asset.json";
+import pmeLiderAsset from "@/assets/cert-pme-lider.png.asset.json";
 import { Link } from "@tanstack/react-router";
 
 const certifications = [
-  { icon: Leaf, label: "OEKO-TEX", sub: "Ecotext Step" },
-  { icon: BadgeCheck, label: "ISO 9001", sub: "Certificada" },
-  { icon: Award, label: "PME Líder", sub: "Reconhecida" },
+  { src: oekoTexAsset.url, alt: "OEKO-TEX Standard 100 STeP" },
+  { src: isoAsset.url, alt: "EIC ISO 9001 — Certificação acreditada IPAC" },
+  { src: pmeLiderAsset.url, alt: "PME Líder 2024" },
 ];
 
 export function LandingFooter() {
@@ -17,22 +19,15 @@ export function LandingFooter() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">
             Certificações
           </p>
-          <div className="mt-6 grid gap-6 sm:grid-cols-3">
-            {certifications.map(({ icon: Icon, label, sub }) => (
-              <div
-                key={label}
-                className="flex items-center gap-4 border border-white/10 bg-white/[0.03] p-5"
-              >
-                <div className="flex size-12 shrink-0 items-center justify-center bg-brand-red text-white">
-                  <Icon className="size-6" strokeWidth={1.75} />
-                </div>
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-wider text-white">
-                    {label}
-                  </p>
-                  <p className="text-xs text-white/60">{sub}</p>
-                </div>
-              </div>
+          <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-6">
+            {certifications.map(({ src, alt }) => (
+              <img
+                key={alt}
+                src={src}
+                alt={alt}
+                className="h-14 w-auto object-contain"
+                loading="lazy"
+              />
             ))}
           </div>
         </div>
