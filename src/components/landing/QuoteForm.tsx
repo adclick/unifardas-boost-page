@@ -120,7 +120,7 @@ export function QuoteForm() {
                   }
                   className={`cursor-pointer border-2 py-3 text-sm transition-all ${
                     active
-                      ? "border-brand-black bg-brand-black text-white"
+                      ? "border-brand-red bg-brand-red/10 text-brand-red"
                       : "border-brand-light bg-white text-brand-gray hover:border-brand-gray/40"
                   }`}
                   aria-pressed={active}
