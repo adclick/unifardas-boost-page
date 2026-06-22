@@ -1,13 +1,21 @@
 import logoAsset from "@/assets/unifardas-logo-2019.png.asset.json";
-import oekoTexAsset from "@/assets/cert-oeko-tex.jpeg.asset.json";
-import isoAsset from "@/assets/cert-iso-9001.png.asset.json";
-import pmeLiderAsset from "@/assets/cert-pme-lider.png.asset.json";
+import cert18 from "@/assets/cert-excelencia-18.png.asset.json";
+import cert22 from "@/assets/cert-pme-lider-22.png.asset.json";
+import cert23 from "@/assets/cert-pme-lider-23.png.asset.json";
+import cert24 from "@/assets/cert-pme-lider-24.png.asset.json";
+import cert25 from "@/assets/cert-pme-lider-25.png.asset.json";
+import certEic from "@/assets/cert-eic-iso-9001.png.asset.json";
+import certOeko from "@/assets/cert-oeko-tex-step.png.asset.json";
 import { Link } from "@tanstack/react-router";
 
 const certifications = [
-  { src: oekoTexAsset.url, alt: "OEKO-TEX Standard 100 STeP" },
-  { src: isoAsset.url, alt: "EIC ISO 9001 — Certificação acreditada IPAC" },
-  { src: pmeLiderAsset.url, alt: "PME Líder 2024" },
+  { src: cert18.url, alt: "PME Excelência 2018" },
+  { src: cert22.url, alt: "PME Líder 2022" },
+  { src: cert23.url, alt: "PME Líder 2023" },
+  { src: cert24.url, alt: "PME Líder 2024" },
+  { src: cert25.url, alt: "PME Líder 2025" },
+  { src: certEic.url, alt: "EIC ISO 9001 — Certificação acreditada IPAC" },
+  { src: certOeko.url, alt: "OEKO-TEX STeP" },
 ];
 
 export function LandingFooter() {
@@ -19,15 +27,19 @@ export function LandingFooter() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">
             Certificações
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-6">
+          <div className="mt-6 flex flex-wrap items-center gap-4">
             {certifications.map(({ src, alt }) => (
-              <img
+              <div
                 key={alt}
-                src={src}
-                alt={alt}
-                className="h-14 w-auto object-contain"
-                loading="lazy"
-              />
+                className="flex h-20 items-center justify-center rounded-md bg-white px-4 py-2"
+              >
+                <img
+                  src={src}
+                  alt={alt}
+                  className="h-full w-auto object-contain"
+                  loading="lazy"
+                />
+              </div>
             ))}
           </div>
         </div>
