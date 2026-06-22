@@ -118,9 +118,9 @@ export function QuoteForm() {
                   onClick={() =>
                     setValue("perfil", opt.v, { shouldValidate: true })
                   }
-                  className={`cursor-pointer border-2 py-3 text-sm font-bold uppercase tracking-wide transition-all ${
+                  className={`cursor-pointer border-2 py-3 text-sm transition-all ${
                     active
-                      ? "border-brand-red bg-brand-red text-white"
+                      ? "border-brand-black bg-brand-black text-white"
                       : "border-brand-light bg-white text-brand-gray hover:border-brand-gray/40"
                   }`}
                   aria-pressed={active}
