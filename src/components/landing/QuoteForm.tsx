@@ -219,7 +219,7 @@ export function QuoteForm() {
         <button
           type="submit"
           disabled={submitting || !consentimento}
-          className="inline-flex w-full items-center justify-center gap-2 bg-brand-black py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-brand-red active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
+          className="inline-flex w-full items-center justify-center gap-2 bg-brand-red py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-brand-red/90 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {submitting ? (
             <Loader2 className="size-4 animate-spin" />
