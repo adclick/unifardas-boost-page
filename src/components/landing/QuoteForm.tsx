@@ -71,9 +71,9 @@ export function QuoteForm() {
       className="overflow-hidden bg-white shadow-2xl shadow-black/40 ring-1 ring-black/5"
     >
       <div className="bg-brand-red px-7 py-6">
-        <h2 className="text-[40px] font-bold tracking-tight text-white">
+        <h3 className="text-[32px] font-bold tracking-tight text-white">
           Peça o seu orçamento
-        </h2>
+        </h3>
         <p className="mt-1 text-sm text-white/85">
           Resposta em menos de 24 horas úteis.
         </p>
