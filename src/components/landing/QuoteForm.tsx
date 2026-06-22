@@ -118,9 +118,9 @@ export function QuoteForm() {
                   onClick={() =>
                     setValue("perfil", opt.v, { shouldValidate: true })
                   }
-                  className={`cursor-pointer border-2 py-3 text-sm font-bold uppercase tracking-wide transition-all ${
+                  className={`cursor-pointer border-2 py-3 text-sm transition-all ${
                     active
-                      ? "border-brand-red bg-brand-red text-white"
+                      ? "border-brand-black bg-brand-black text-white"
                       : "border-brand-light bg-white text-brand-gray hover:border-brand-gray/40"
                   }`}
                   aria-pressed={active}
@@ -219,7 +219,7 @@ export function QuoteForm() {
         <button
           type="submit"
           disabled={submitting || !consentimento}
-          className="inline-flex w-full items-center justify-center gap-2 bg-brand-black py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-brand-red active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
+          className="inline-flex w-full items-center justify-center gap-2 bg-brand-red py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-brand-red/90 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {submitting ? (
             <Loader2 className="size-4 animate-spin" />
