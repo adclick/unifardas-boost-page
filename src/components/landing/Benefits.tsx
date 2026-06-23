@@ -47,23 +47,23 @@ export function Benefits() {
             Porquê escolher a Unifardas?
           </h2>
         </div>
-      </div>
 
-      <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map(({ id, icon, title, alt, desc }) => (
-          <div
-            key={id}
-            className="group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
-          >
-            <img src={icon} alt={alt} className="h-14 w-14" aria-hidden />
-            <h3 className="mt-6 text-[28px] font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">
-              {title}
-            </h3>
-            <p className="mt-3 text-[18px] font-normal leading-[24px] text-brand-gray transition-colors group-hover:text-white/80">
-              {desc}
-            </p>
-          </div>
-        ))}
+        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {items.map(({ id, icon, title, alt, desc }) => (
+            <div
+              key={id}
+              className="group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
+            >
+              <img src={icon} alt={alt} className="h-14 w-14" aria-hidden />
+              <h3 className="mt-6 text-[28px] font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">
+                {title}
+              </h3>
+              <p className="mt-3 text-[18px] font-normal leading-[24px] text-brand-gray transition-colors group-hover:text-white/80">
+                {desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
