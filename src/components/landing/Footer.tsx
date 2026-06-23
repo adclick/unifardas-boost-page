@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/unifardas-logo-2019.png.asset.json";
+import iconAsset from "@/assets/unifardas-icon.svg.asset.json";
 import cert18 from "@/assets/cert-excelencia-18.png.asset.json";
 import cert22 from "@/assets/cert-pme-lider-22.png.asset.json";
 import cert23 from "@/assets/cert-pme-lider-23.png.asset.json";
@@ -21,105 +21,78 @@ const certifications = [
 export function LandingFooter() {
   return (
     <footer className="bg-brand-black text-white">
-      {/* Certifications strip */}
+      {/* Top CTA */}
       <div className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-12">
-          <p className="text-xs font-bold uppercase tracking-[0.05em] text-white/50">
-            Certificações
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 py-10 lg:flex-row lg:items-center lg:px-12">
+          <p className="text-xl font-semibold text-white md:text-2xl">
+            Junte-se aos mais de 500 clientes satisfeitos
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            {certifications.map(({ src, alt }) => (
-              <div
-                key={alt}
-                className="flex h-20 items-center justify-center rounded-md bg-white px-4 py-2"
-              >
-                <img
-                  src={src}
-                  alt={alt}
-                  className="h-full w-auto object-contain"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
+          <a
+            href="#orcamento"
+            className="inline-flex items-center justify-center rounded-md bg-brand-red px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-red-bright"
+          >
+            Pedir orçamento agora
+          </a>
         </div>
       </div>
 
-      {/* Main footer */}
+      {/* Main footer: 50/50 */}
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-12">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-12 md:grid-cols-2">
+          {/* Left: Certifications */}
+          <div>
+            <h2 className="text-[32px] font-semibold leading-tight text-white">
+              Certificações.
+              <br />
+              A prova de confiança.
+            </h2>
+            <div className="mt-8 grid grid-cols-3 gap-4 sm:grid-cols-4">
+              {certifications.map(({ src, alt }) => (
+                <div
+                  key={alt}
+                  className="flex aspect-square items-center justify-center rounded-md bg-white/90 p-3"
+                >
+                  <img
+                    src={src}
+                    alt={alt}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Company */}
           <div>
             <img
-              src={logoAsset.url}
+              src={iconAsset.url}
               alt="Unifardas"
-              className="h-12 w-auto brightness-0 invert"
+              className="h-16 w-auto"
             />
-            <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
-              Fardas profissionais personalizadas. Produção nacional, qualidade
-              garantida.
+            <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/75">
+              A Unifardas é uma empresa portuguesa com sólida experiência e
+              tradição no setor do vestuário profissional, dedicada à produção
+              e comercialização todo o tipo de fardas, uniformes, batas,
+              equipamentos de proteção individual (EPI&apos;S) e vestuário
+              profissional, adaptando os seus produtos à imagem corporativa do
+              seu negócio, sem nunca descurar a segurança dos seus
+              colaboradores nem a visibilidade externa da sua empresa.
             </p>
-          </div>
-
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">
-              Navegação
-            </p>
-            <ul className="mt-5 space-y-3 text-sm">
-              <li>
-                <a href="#solucoes" className="text-white/80 hover:text-brand-red-bright">
-                  Soluções
-                </a>
-              </li>
-              <li>
-                <a href="#setores" className="text-white/80 hover:text-brand-red-bright">
-                  Setores
-                </a>
-              </li>
-              <li>
-                <a href="#reviews" className="text-white/80 hover:text-brand-red-bright">
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a href="#orcamento" className="text-white/80 hover:text-brand-red-bright">
-                  Pedir orçamento
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">
-              Legal
-            </p>
-            <ul className="mt-5 space-y-3 text-sm">
-              <li>
-                <Link
-                  to="/privacidade"
-                  className="text-white/80 hover:text-brand-red-bright"
-                >
-                  Política de privacidade
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://unifardas.pt/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-white/80 hover:text-brand-red-bright"
-                >
-                  Loja online
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 md:flex-row">
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Unifardas. Fabricado em Portugal. Todos
             os direitos reservados.
           </p>
+          <Link
+            to="/privacidade"
+            className="text-xs text-white/70 hover:text-brand-red-bright md:ml-auto"
+          >
+            Política de privacidade
+          </Link>
         </div>
       </div>
     </footer>
