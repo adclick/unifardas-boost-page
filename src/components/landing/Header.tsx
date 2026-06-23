@@ -1,7 +1,7 @@
 import logo from "@/assets/unifardas-logo-2019.png.asset.json";
 
 const nav = [
-  { href: "#solucoes", label: "Soluções" },
+  { href: "#vantagens", label: "Vantagens" },
   { href: "#setores", label: "Setores" },
   { href: "#sobre", label: "Sobre" },
   { href: "#clientes", label: "Clientes" },

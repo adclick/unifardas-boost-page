@@ -36,7 +36,7 @@ const items = [
 
 export function Benefits() {
   return (
-    <section id="solucoes" className="bg-brand-light py-24 lg:py-32">
+    <section id="vantagens" className="bg-brand-light py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/20">
