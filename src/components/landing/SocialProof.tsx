@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Award, Shirt, Building2, Heart } from "lucide-react";
 import bgAsset from "@/assets/sobre-nos-bg-new.jpeg.asset.json";
 
 const stats = [
-  { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot", icon: Award },
-  { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain", icon: Shirt },
-  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem nossos artigos", format: "dot", icon: Building2 },
-  { value: 95, prefix: "", suffix: "%", label: "de clientes com elevado grau de satisfação", format: "plain", icon: Heart },
+  { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot" },
+  { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain" },
+  { value: 10000, prefix: "", suffix: "", label: <>entidades que conhecem<br />os artigos da Unifardas</>, format: "dot" },
+  { value: 95, prefix: "", suffix: "%", label: <>de clientes com elevado<br />grau de satisfação</>, format: "plain" },
 ];
-
 
 function useCountUp(target: number, start: boolean, duration = 1600) {
   const [n, setN] = useState(0);
@@ -40,7 +38,6 @@ function Stat({
   label,
   format,
   visible,
-  icon: Icon,
 }: {
   value: number;
   prefix: string;
@@ -48,27 +45,21 @@ function Stat({
   label: ReactNode;
   format: string;
   visible: boolean;
-  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
 }) {
   const n = useCountUp(value, visible);
   return (
-    <div className="flex h-full flex-col items-center text-center">
-      <div className="mb-4 inline-flex items-center justify-center rounded-full bg-white/10 p-4 ring-1 ring-white/20">
-        <Icon className="size-8 text-brand-red" strokeWidth={1.5} />
-      </div>
-      <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl lg:text-8xl">
+    <div className="flex h-full flex-col items-center text-center px-4">
+      <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl lg:text-8xl leading-none">
         {prefix}
         {formatNumber(n, format)}
         {suffix}
       </div>
-      <p className="mt-4 text-[22px] leading-[30px] font-light text-white max-w-[280px] mx-auto">
+      <p className="mt-6 text-base sm:text-lg leading-snug font-medium text-white/90 max-w-[260px] mx-auto">
         {label}
       </p>
     </div>
   );
 }
-
-
 
 export function SocialProof() {
   const ref = useRef<HTMLDivElement>(null);
@@ -90,33 +81,29 @@ export function SocialProof() {
     >
       <div
         aria-hidden
-        className="absolute inset-0 bg-cover bg-center opacity-70"
+        className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${bgAsset.url})` }}
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/90"
+        className="absolute inset-0 bg-black/55"
       />
       <div ref={ref} className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
             <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
-            Sobre nós
+            Unifardas
           </span>
           <h2 className="mt-6 text-[40px] font-bold tracking-tight text-white whitespace-nowrap">
             Os números falam por nós! São mais de....
           </h2>
         </div>
 
-        <div className="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 items-stretch">
+        <div className="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 items-stretch lg:divide-x lg:divide-white/15">
           {stats.map((s, idx) => (
-            <div key={idx} className="rounded-2xl bg-white/5 border border-white/10 px-6 py-10 lg:px-8 lg:py-12 min-h-[300px] flex items-center justify-center">
-              <Stat {...s} visible={visible} />
-            </div>
+            <Stat key={idx} {...s} visible={visible} />
           ))}
         </div>
-
-
       </div>
     </section>
   );
