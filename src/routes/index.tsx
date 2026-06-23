@@ -57,32 +57,35 @@ function LandingPage() {
 
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 pt-20 pb-24 lg:grid-cols-12 lg:gap-12 lg:px-12 lg:pt-32 lg:pb-36">
             {/* Left: copy */}
-            <div className="lg:col-span-7 text-white">
-              <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
-                <span className="size-1.5 rounded-full bg-white animate-pulse" />
-                Fardas profissionais personalizadas
-              </span>
-              <h1 className="mt-6 text-balance text-[48px] font-bold leading-[1.05] tracking-tight text-white">
-                Fardas profissionais que{" "}
-                <span className="text-brand-red-bright">valorizam a imagem</span>{" "}
-                da sua empresa e acompanham o ritmo do seu negócio.
-              </h1>
-              <p className="mt-10 max-w-[55ch] text-pretty text-lg leading-relaxed text-white/85 sm:text-xl">
-                Uniformes à medida com tecidos de alta qualidade, personalização
-                completa e entrega rápida em Portugal continental e ilhas.
-              </p>
-              <div className="mt-10 flex flex-wrap items-stretch gap-4 text-white">
+            <div className="flex flex-col lg:col-span-7 text-white">
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
+                  <span className="size-1.5 rounded-full bg-white animate-pulse" />
+                  Fardas profissionais personalizadas
+                </span>
+                <h1 className="mt-8 text-balance text-[48px] font-bold leading-[1.05] tracking-tight text-white">
+                  Fardas profissionais que{" "}
+                  <span className="text-brand-red-bright">valorizam a imagem</span>{" "}
+                  da sua empresa e acompanham o ritmo do seu negócio.
+                </h1>
+                <p className="mt-8 max-w-[55ch] text-pretty text-xl sm:text-2xl leading-relaxed text-white/90 font-light">
+                  Uniformes à medida com tecidos de alta qualidade, personalização
+                  completa e entrega rápida em Portugal continental e ilhas.
+                </p>
+              </div>
+
+              <div className="mt-12 lg:mt-0 flex flex-wrap items-stretch gap-3 text-white">
                 {[
-                  { Icon: Award, label: "+30 anos" },
+                  { Icon: Award, label: "30 anos" },
                   { Icon: Factory, label: "Produção nacional" },
                   { Icon: Clock, label: "Resposta 24h" },
                 ].map(({ Icon, label }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-4 rounded-lg border border-white/25 bg-white/10 px-6 py-4 backdrop-blur-sm sm:px-7 sm:py-5"
+                    className="flex items-center gap-3 rounded-lg border border-white/25 bg-white/10 px-4 py-3 backdrop-blur-sm"
                   >
-                    <Icon className="size-8 shrink-0 text-brand-red-bright sm:size-9" strokeWidth={2.2} />
-                    <span className="text-base font-bold uppercase tracking-wide sm:text-lg">
+                    <Icon className="size-6 shrink-0 text-brand-red-bright" strokeWidth={2} />
+                    <span className="text-sm font-semibold tracking-wide">
                       {label}
                     </span>
                   </div>
