@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { Award, Shirt, Building2, Heart } from "lucide-react";
 import bgAsset from "@/assets/sobre-nos-bg.jpeg.asset.json";
 
 const stats = [
-  { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot" },
-  { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain" },
-  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem nossos artigos", format: "dot" },
-  { value: 95, prefix: "", suffix: "%", label: "de clientes com elevado grau de satisfação", format: "plain" },
+  { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot", icon: Award },
+  { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain", icon: Shirt },
+  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem nossos artigos", format: "dot", icon: Building2 },
+  { value: 95, prefix: "", suffix: "%", label: "de clientes com elevado grau de satisfação", format: "plain", icon: Heart },
 ];
+
 
 function useCountUp(target: number, start: boolean, duration = 1600) {
   const [n, setN] = useState(0);
