@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { ClientsMarquee } from "./ClientsMarquee";
 
 const testimonials = [
   {
@@ -44,7 +45,7 @@ export function TestimonialsCarousel() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/20">
             <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
-            Depoimentos
+            Clientes
           </span>
           <h2 className="mt-2 text-[40px] font-semibold tracking-tight text-brand-black">
             O que os nossos clientes dizem
@@ -77,7 +78,7 @@ export function TestimonialsCarousel() {
             >
               <div className="flex h-full flex-col justify-between rounded-sm border border-neutral-200 bg-white p-6 transition hover:border-brand-red/30 hover:shadow-lg hover:shadow-brand-red/5">
                 <div>
-                  <div className="flex gap-0.5 text-brand-red">
+                  <div className="flex gap-0.5 text-star">
                     {Array.from({ length: t.stars }).map((_, s) => (
                       <Star key={s} className="size-4 fill-current" />
                     ))}
@@ -124,6 +125,8 @@ export function TestimonialsCarousel() {
           />
         ))}
       </div>
+
+      <ClientsMarquee />
 
       </div>
     </section>

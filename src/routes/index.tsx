@@ -3,7 +3,7 @@ import { Award, Factory, Clock } from "lucide-react";
 import { LandingHeader } from "@/components/landing/Header";
 import { Benefits } from "@/components/landing/Benefits";
 import { SectorMosaic } from "@/components/landing/SectorMosaic";
-import { ClientsMarquee } from "@/components/landing/ClientsMarquee";
+import { SectorMosaic } from "@/components/landing/SectorMosaic";
 import { TestimonialsCarousel } from "@/components/landing/TestimonialsCarousel";
 import { QuoteForm } from "@/components/landing/QuoteForm";
 import { LandingFooter } from "@/components/landing/Footer";
@@ -99,7 +99,6 @@ function LandingPage() {
 
         <Benefits />
         <SectorMosaic />
-        <ClientsMarquee />
         <TestimonialsCarousel />
       </main>
       <LandingFooter />
