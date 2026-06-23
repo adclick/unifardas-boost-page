@@ -23,21 +23,9 @@ const logos = [
 export function ClientsMarquee() {
   const loop = [...logos, ...logos];
   return (
-    <section id="clientes" className="bg-white py-20 lg:py-24 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-sm bg-black/5 px-3 py-1.5 text-xs font-semibold text-black/70 uppercase ring-1 ring-black/10">
-            <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
-            Clientes
-          </span>
-          <h2 className="mt-6 text-[32px] sm:text-[40px] font-bold tracking-tight text-black">
-            Marcas que confiam em nós
-          </h2>
-        </div>
-      </div>
-
+    <section id="clientes" className="bg-white py-16 lg:py-20 overflow-hidden">
       <div
-        className="relative mt-14 group"
+        className="relative group"
         style={{
           maskImage:
             "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
