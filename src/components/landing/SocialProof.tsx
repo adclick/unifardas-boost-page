@@ -80,9 +80,13 @@ export function SocialProof() {
               Os números falam por nós! São mais de....
             </h2>
             <p className="mt-6 text-base leading-relaxed text-white/75">
-              A UNIFARDAS® é uma empresa Portuguesa, dotada de uma sólida
-              experiência e de uma larga tradição no sector de vestuário
-              profissional.
+              A Unifardas é uma empresa portuguesa com sólida experiência e
+              tradição no setor do vestuário profissional, dedicada ao
+              desenvolvimento e produção de fardas, uniformes, EPIs e vestuário
+              técnico. Especializada em soluções personalizadas, adapta cada
+              produto à identidade de cada empresa, garantindo qualidade,
+              funcionalidade e elevados padrões de exigência em todos os
+              projetos.
             </p>
           </div>
 
