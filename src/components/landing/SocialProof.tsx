@@ -53,12 +53,13 @@ function Stat({
         {formatNumber(n, format)}
         {suffix}
       </div>
-      <p className="mt-4 text-base font-semibold text-white max-w-[220px] mx-auto leading-snug">
+      <p className="mt-4 text-[20px] leading-[28px] font-light text-white max-w-[260px] mx-auto">
         {label}
       </p>
     </div>
   );
 }
+
 
 export function SocialProof() {
   const ref = useRef<HTMLDivElement>(null);
