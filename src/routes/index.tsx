@@ -7,7 +7,7 @@ import { TestimonialsCarousel } from "@/components/landing/TestimonialsCarousel"
 import { SocialProof } from "@/components/landing/SocialProof";
 import { QuoteForm } from "@/components/landing/QuoteForm";
 import { LandingFooter } from "@/components/landing/Footer";
-import heroBg from "@/assets/hero-bg-ocean.jpeg.asset.json";
+import heroBg from "@/assets/hero-team.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
