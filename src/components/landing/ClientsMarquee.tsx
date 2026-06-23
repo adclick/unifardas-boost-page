@@ -51,17 +51,17 @@ export function ClientsMarquee() {
             "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
         }}
       >
-        <div className="flex w-max animate-marquee gap-10 group-hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee gap-6 group-hover:[animation-play-state:paused]">
           {loop.map((l, i) => (
             <div
               key={i}
-              className="flex h-20 w-36 shrink-0 items-center justify-center"
+              className="flex h-28 w-44 shrink-0 items-center justify-center"
             >
               <img
                 src={l.src}
                 alt={l.alt}
                 loading="lazy"
-                className="max-h-16 max-w-[140px] object-contain grayscale opacity-70 transition hover:grayscale-0 hover:opacity-100"
+                className="max-h-24 max-w-[180px] object-contain grayscale opacity-70 transition hover:grayscale-0 hover:opacity-100"
               />
             </div>
           ))}
