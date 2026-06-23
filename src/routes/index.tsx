@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Award, Factory, Clock } from "lucide-react";
+import { Award, Factory, Clock } from "lucide-react";
 import { LandingHeader } from "@/components/landing/Header";
 import { Benefits } from "@/components/landing/Benefits";
 import { SectorMosaic } from "@/components/landing/SectorMosaic";
