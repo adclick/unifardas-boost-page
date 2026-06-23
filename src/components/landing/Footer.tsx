@@ -8,14 +8,19 @@ import certEic from "@/assets/cert-eic-iso-9001.png.asset.json";
 import certOeko from "@/assets/cert-oeko-tex-step.png.asset.json";
 import { Link } from "@tanstack/react-router";
 
-const certifications = [
+type CertificationItem =
+  | { src: string; alt: string }
+  | { placeholder: true };
+
+const certifications: CertificationItem[] = [
   { src: cert18.url, alt: "PME Excelência 2018" },
+  { src: certEic.url, alt: "EIC ISO 9001 — Certificação acreditada IPAC" },
+  { src: certOeko.url, alt: "OEKO-TEX STeP" },
+  { placeholder: true },
   { src: cert22.url, alt: "PME Líder 2022" },
   { src: cert23.url, alt: "PME Líder 2023" },
   { src: cert24.url, alt: "PME Líder 2024" },
   { src: cert25.url, alt: "PME Líder 2025" },
-  { src: certEic.url, alt: "EIC ISO 9001 — Certificação acreditada IPAC" },
-  { src: certOeko.url, alt: "OEKO-TEX STeP" },
 ];
 
 export function LandingFooter() {
@@ -38,7 +43,7 @@ export function LandingFooter() {
 
       {/* Main footer: 50/50 */}
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-12">
-        <div className="grid items-start gap-12 md:grid-cols-2">
+        <div className="grid items-start gap-20 md:grid-cols-2">
           {/* Left: Company */}
           <div>
             <img
@@ -65,19 +70,27 @@ export function LandingFooter() {
               A prova de confiança.
             </h2>
             <div className="mt-8 grid grid-cols-4 gap-2">
-              {certifications.map(({ src, alt }) => (
-                <div
-                  key={alt}
-                  className="flex h-14 w-14 items-center justify-center rounded-md bg-white/90 p-1.5"
-                >
-                  <img
-                    src={src}
-                    alt={alt}
-                    className="max-h-full max-w-full object-contain"
-                    loading="lazy"
+              {certifications.map((item, index) =>
+                "placeholder" in item ? (
+                  <div
+                    key={`placeholder-${index}`}
+                    className="h-16 w-16"
+                    aria-hidden="true"
                   />
-                </div>
-              ))}
+                ) : (
+                  <div
+                    key={item.alt}
+                    className="flex h-16 w-16 items-center justify-center rounded-md bg-white/90 p-1.5"
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
