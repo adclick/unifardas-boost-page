@@ -71,7 +71,7 @@ function LandingPage() {
                 Uniformes à medida com tecidos de alta qualidade, personalização
                 completa e entrega rápida em Portugal continental e ilhas.
               </p>
-              <div className="mt-10 flex flex-wrap items-start gap-3 sm:gap-4 text-white/90">
+              <div className="mt-10 flex flex-wrap items-stretch gap-4 text-white">
                 {[
                   { Icon: Award, label: "+30 anos" },
                   { Icon: Factory, label: "Produção nacional" },
@@ -79,10 +79,10 @@ function LandingPage() {
                 ].map(({ Icon, label }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3 rounded-md border border-white/20 bg-white/10 px-5 py-3 backdrop-blur-sm sm:px-6 sm:py-4"
+                    className="flex items-center gap-4 rounded-lg border border-white/25 bg-white/10 px-6 py-4 backdrop-blur-sm sm:px-7 sm:py-5"
                   >
-                    <Icon className="size-5 shrink-0 text-brand-red-bright sm:size-6" />
-                    <span className="text-sm font-semibold uppercase tracking-wide sm:text-base">
+                    <Icon className="size-8 shrink-0 text-brand-red-bright sm:size-9" strokeWidth={2.2} />
+                    <span className="text-base font-bold uppercase tracking-wide sm:text-lg">
                       {label}
                     </span>
                   </div>
