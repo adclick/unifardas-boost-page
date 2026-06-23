@@ -49,7 +49,7 @@ function Stat({
   const n = useCountUp(value, visible);
   return (
     <div className="flex h-full flex-col items-center text-center px-4">
-      <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl lg:text-8xl leading-none">
+      <div className="text-brand-red font-bold tracking-tight text-4xl sm:text-5xl lg:text-6xl leading-none">
         {prefix}
         {formatNumber(n, format)}
         {suffix}
