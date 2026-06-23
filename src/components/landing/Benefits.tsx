@@ -48,7 +48,7 @@ export function Benefits() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 -mx-6 lg:-mx-12">
           {items.map(({ id, icon, title, alt, desc }) => (
             <div
               key={id}
@@ -58,7 +58,7 @@ export function Benefits() {
               <h3 className="mt-6 text-[28px] font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">
                 {title}
               </h3>
-              <p className="mt-3 text-[20px] font-normal leading-[36px] text-brand-gray transition-colors group-hover:text-white/80">
+              <p className="mt-3 text-[18px] font-normal leading-[24px] text-brand-gray transition-colors group-hover:text-white/80">
                 {desc}
               </p>
             </div>
