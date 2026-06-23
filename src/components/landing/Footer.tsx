@@ -24,7 +24,7 @@ export function LandingFooter() {
       {/* Top CTA */}
       <div className="border-b border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 py-10 lg:flex-row lg:items-center lg:px-12">
-          <p className="text-xl font-semibold text-white md:text-2xl">
+          <p className="text-[36px] font-semibold text-white leading-tight">
             Junte-se aos mais de 500 clientes satisfeitos
           </p>
           <a
