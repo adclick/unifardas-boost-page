@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Award, Shirt, Building2, Heart } from "lucide-react";
-import bgAsset from "@/assets/sobre-nos-bg.jpeg.asset.json";
+import bgAsset from "@/assets/sobre-nos-bg-new.jpeg.asset.json";
 
 const stats = [
   { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot", icon: Award },
