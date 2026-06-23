@@ -53,12 +53,13 @@ function Stat({
         {formatNumber(n, format)}
         {suffix}
       </div>
-      <p className="mt-4 text-base font-semibold text-white max-w-[220px] mx-auto leading-snug">
+      <p className="mt-4 text-[20px] leading-[28px] font-light text-white max-w-[260px] mx-auto">
         {label}
       </p>
     </div>
   );
 }
+
 
 export function SocialProof() {
   const ref = useRef<HTMLDivElement>(null);
@@ -81,16 +82,19 @@ export function SocialProof() {
             <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
             Sobre nós
           </span>
-          <h2 className="mt-6 text-[32px] sm:text-[40px] font-bold tracking-tight text-white max-w-3xl">
+          <h2 className="mt-6 text-[40px] font-bold tracking-tight text-white whitespace-nowrap">
             Os números falam por nós! São mais de....
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15">
           {stats.map((s) => (
-            <Stat key={s.label} {...s} visible={visible} />
+            <div key={s.label} className="lg:px-8">
+              <Stat {...s} visible={visible} />
+            </div>
           ))}
         </div>
+
       </div>
     </section>
   );
