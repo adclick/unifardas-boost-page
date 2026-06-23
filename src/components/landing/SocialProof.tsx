@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 10000, prefix: "", suffix: "", label: "referências em fardas profissionais", format: "dot" },
-  { value: 500, prefix: "", suffix: "", label: "peças produzidas todos os dias", format: "plain" },
-  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem os artigos da Unifardas", format: "dot" },
+  { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot" },
+  { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain" },
+  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem nossos artigos", format: "dot" },
   { value: 95, prefix: "", suffix: "%", label: "de clientes com elevado grau de satisfação", format: "plain" },
 ];
 
