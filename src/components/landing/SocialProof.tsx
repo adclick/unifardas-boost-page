@@ -40,6 +40,7 @@ function Stat({
   label,
   format,
   visible,
+  icon: Icon,
 }: {
   value: number;
   prefix: string;
@@ -47,23 +48,26 @@ function Stat({
   label: ReactNode;
   format: string;
   visible: boolean;
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
 }) {
   const n = useCountUp(value, visible);
   return (
-    <div className="flex h-full flex-col text-center">
-      <div className="flex-1 flex items-center justify-center">
-        <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl py-8">
-          {prefix}
-          {formatNumber(n, format)}
-          {suffix}
-        </div>
+    <div className="flex h-full flex-col items-center text-center">
+      <div className="mb-4 inline-flex items-center justify-center rounded-full bg-white/10 p-4 ring-1 ring-white/20">
+        <Icon className="size-8 text-brand-red" strokeWidth={1.5} />
       </div>
-      <p className="text-[20px] leading-[28px] font-light text-white max-w-[260px] mx-auto">
+      <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl lg:text-8xl">
+        {prefix}
+        {formatNumber(n, format)}
+        {suffix}
+      </div>
+      <p className="mt-4 text-[22px] leading-[30px] font-light text-white max-w-[280px] mx-auto">
         {label}
       </p>
     </div>
   );
 }
+
 
 
 export function SocialProof() {
