@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Award, Factory, Clock } from "lucide-react";
 import { LandingHeader } from "@/components/landing/Header";
 import { Benefits } from "@/components/landing/Benefits";
 import { SectorMosaic } from "@/components/landing/SectorMosaic";
@@ -70,19 +71,22 @@ function LandingPage() {
                 Uniformes à medida com tecidos de alta qualidade, personalização
                 completa e entrega rápida em Portugal continental e ilhas.
               </p>
-              <div className="mt-10 flex flex-col items-start gap-3 text-sm text-white/90">
-                <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
-                  <span className="block h-px w-6 bg-brand-red-bright" />
-                  <span className="font-semibold uppercase">+30 anos</span>
-                </div>
-                <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
-                  <span className="block h-px w-6 bg-brand-red-bright" />
-                  <span className="font-semibold uppercase">Produção nacional</span>
-                </div>
-                <div className="flex items-center gap-2 rounded-sm border border-brand-red-bright/60 bg-brand-red/15 px-4 py-2 backdrop-blur-sm">
-                  <span className="block h-px w-6 bg-brand-red-bright" />
-                  <span className="font-semibold uppercase">Resposta 24h</span>
-                </div>
+              <div className="mt-10 flex flex-wrap items-start gap-3 sm:gap-4 text-white/90">
+                {[
+                  { Icon: Award, label: "+30 anos" },
+                  { Icon: Factory, label: "Produção nacional" },
+                  { Icon: Clock, label: "Resposta 24h" },
+                ].map(({ Icon, label }) => (
+                  <div
+                    key={label}
+                    className="flex items-center gap-3 rounded-md border border-white/20 bg-white/10 px-5 py-3 backdrop-blur-sm sm:px-6 sm:py-4"
+                  >
+                    <Icon className="size-5 shrink-0 text-brand-red-bright sm:size-6" />
+                    <span className="text-sm font-semibold uppercase tracking-wide sm:text-base">
+                      {label}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
