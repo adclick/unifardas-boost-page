@@ -41,7 +41,7 @@ function Stat({
   value: number;
   prefix: string;
   suffix: string;
-  label: React.ReactNode;
+  label: ReactNode;
   format: string;
   visible: boolean;
 }) {
