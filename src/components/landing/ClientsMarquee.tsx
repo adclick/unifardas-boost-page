@@ -52,29 +52,3 @@ export function ClientsMarquee() {
     </section>
   );
 }
-        style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-        }}
-      >
-        <div className="flex w-max animate-marquee gap-16 group-hover:[animation-play-state:paused]">
-          {loop.map((l, i) => (
-            <div
-              key={i}
-              className="flex h-24 w-44 shrink-0 items-center justify-center"
-            >
-              <img
-                src={l.src}
-                alt={l.alt}
-                loading="lazy"
-                className="max-h-20 max-w-[160px] object-contain grayscale opacity-70 transition hover:grayscale-0 hover:opacity-100"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
