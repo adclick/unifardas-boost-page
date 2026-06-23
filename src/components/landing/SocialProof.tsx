@@ -88,8 +88,8 @@ export function SocialProof() {
         </div>
 
         <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15">
-          {stats.map((s) => (
-            <div key={s.label} className="lg:px-8">
+          {stats.map((s, idx) => (
+            <div key={idx} className="lg:px-8">
               <Stat {...s} visible={visible} />
             </div>
           ))}
