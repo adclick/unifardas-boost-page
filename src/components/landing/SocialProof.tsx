@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 30, prefix: "+", suffix: "", label: "Anos de experiência" },
-  { value: 100, prefix: "+", suffix: "", label: "Empresas parceiras" },
-  { value: 24, prefix: "", suffix: "h", label: "Resposta a orçamentos" },
+  { value: 10000, prefix: "", suffix: "", label: "referências em fardas profissionais", format: "dot" },
+  { value: 500, prefix: "", suffix: "", label: "peças produzidas todos os dias", format: "plain" },
+  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem os artigos da Unifardas", format: "dot" },
+  { value: 95, prefix: "", suffix: "%", label: "de clientes com elevado grau de satisfação", format: "plain" },
 ];
 
 function useCountUp(target: number, start: boolean, duration = 1600) {
@@ -24,30 +25,35 @@ function useCountUp(target: number, start: boolean, duration = 1600) {
   return n;
 }
 
+function formatNumber(n: number, format: string) {
+  if (format === "dot") return n.toLocaleString("de-DE");
+  return n.toString();
+}
+
 function Stat({
   value,
   prefix,
   suffix,
   label,
+  format,
   visible,
 }: {
   value: number;
   prefix: string;
   suffix: string;
   label: string;
+  format: string;
   visible: boolean;
 }) {
   const n = useCountUp(value, visible);
   return (
-    <div className="border-l-2 border-brand-red pl-6">
-      <div className="flex items-baseline text-white">
-        <span className="text-6xl font-bold tracking-tight sm:text-7xl lg:text-8xl">
-          {prefix}
-          {n}
-        </span>
-        <span className="text-3xl font-bold sm:text-4xl">{suffix}</span>
+    <div className="text-center">
+      <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl">
+        {prefix}
+        {formatNumber(n, format)}
+        {suffix}
       </div>
-      <p className="mt-3 text-sm font-semibold uppercase tracking-widest text-white/70">
+      <p className="mt-4 text-base font-semibold text-white max-w-[220px] mx-auto leading-snug">
         {label}
       </p>
     </div>
@@ -70,31 +76,20 @@ export function SocialProof() {
   return (
     <section id="sobre" className="bg-brand-black py-24 lg:py-32">
       <div ref={ref} className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="grid gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
-              <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
-              Sobre nós
-            </span>
-            <h2 className="mt-4 text-[40px] font-bold tracking-tight text-white">
-              Os números falam por nós! São mais de....
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-white/75">
-              A Unifardas é uma empresa portuguesa com sólida experiência e
-              tradição no setor do vestuário profissional, dedicada ao
-              desenvolvimento e produção de fardas, uniformes, EPIs e vestuário
-              técnico. Especializada em soluções personalizadas, adapta cada
-              produto à identidade de cada empresa, garantindo qualidade,
-              funcionalidade e elevados padrões de exigência em todos os
-              projetos.
-            </p>
-          </div>
+        <div className="flex flex-col items-center text-center">
+          <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
+            <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
+            Sobre nós
+          </span>
+          <h2 className="mt-6 text-[32px] sm:text-[40px] font-bold tracking-tight text-white max-w-3xl">
+            Os números falam por nós! São mais de....
+          </h2>
+        </div>
 
-          <div className="lg:col-span-7 grid gap-10 sm:grid-cols-3 sm:gap-6">
-            {stats.map((s) => (
-              <Stat key={s.label} {...s} visible={visible} />
-            ))}
-          </div>
+        <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {stats.map((s) => (
+            <Stat key={s.label} {...s} visible={visible} />
+          ))}
         </div>
       </div>
     </section>
