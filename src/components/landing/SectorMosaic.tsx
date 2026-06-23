@@ -29,7 +29,7 @@ export function SectorMosaic() {
               Setores que vestimos
             </h2>
           </div>
-          <p className="lg:col-span-5 text-[24px] font-normal leading-[32px] text-brand-gray">
+          <p className="lg:col-span-5 text-[20px] font-light leading-[28px] text-brand-gray">
             Desenvolvemos soluções de vestuário profissional adaptadas às
             necessidades de diferentes áreas de atividade.
           </p>
