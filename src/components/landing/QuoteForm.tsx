@@ -74,7 +74,7 @@ export function QuoteForm() {
         <h3 className="text-[32px] font-bold tracking-tight text-white">
           Peça o seu orçamento
         </h3>
-        <p className="mt-1 text-sm text-white/85">
+        <p className="mt-1 text-base text-white/85">
           Resposta em menos de 24 horas úteis.
         </p>
       </div>
