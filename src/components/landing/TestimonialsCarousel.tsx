@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { Star, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -125,18 +125,6 @@ export function TestimonialsCarousel() {
         ))}
       </div>
 
-      <div className="mt-12 flex flex-col items-center gap-4 text-center">
-        <p className="text-lg font-medium text-brand-black">
-          Junte-se aos mais de 500 clientes satisfeitos
-        </p>
-        <a
-          href="#orcamento"
-          className="inline-flex items-center gap-2 rounded-sm bg-brand-red px-8 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-brand-red/30 transition-all hover:bg-brand-red/90 hover:shadow-xl hover:shadow-brand-red/40 active:scale-[0.98]"
-        >
-          Pedir orçamento agora
-          <ArrowRight className="size-4" />
-        </a>
-      </div>
       </div>
     </section>
   );
