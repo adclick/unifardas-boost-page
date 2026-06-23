@@ -38,7 +38,7 @@ export function TestimonialsCarousel() {
   }, [emblaApi]);
 
   return (
-    <section id="reviews" className="bg-brand-light py-24 lg:py-32">
+    <section id="clientes" className="bg-brand-light py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
 
       <div className="mb-8 flex items-end justify-between">
