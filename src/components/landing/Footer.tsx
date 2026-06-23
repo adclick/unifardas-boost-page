@@ -69,18 +69,18 @@ export function LandingFooter() {
               <br />
               A prova de confiança.
             </h2>
-            <div className="mt-8 grid grid-cols-4 gap-2">
+            <div className="mt-8 grid grid-cols-[repeat(4,4rem)] gap-px">
               {certifications.map((item, index) =>
                 "placeholder" in item ? (
                   <div
                     key={`placeholder-${index}`}
-                    className="h-16 w-16"
+                    className="h-16 w-full"
                     aria-hidden="true"
                   />
                 ) : (
                   <div
                     key={item.alt}
-                    className="flex h-16 w-16 items-center justify-center rounded-md bg-white/90 p-1.5"
+                    className="flex h-16 w-full items-center justify-center rounded-sm bg-white/90 p-0.5"
                   >
                     <img
                       src={item.src}
