@@ -8,15 +8,12 @@ import certEic from "@/assets/cert-eic-iso-9001.png.asset.json";
 import certOeko from "@/assets/cert-oeko-tex-step.png.asset.json";
 import { Link } from "@tanstack/react-router";
 
-type CertificationItem =
-  | { src: string; alt: string }
-  | { placeholder: true };
+type CertificationItem = { src: string; alt: string };
 
 const certifications: CertificationItem[] = [
   { src: cert18.url, alt: "PME Excelência 2018" },
   { src: certEic.url, alt: "EIC ISO 9001 — Certificação acreditada IPAC" },
   { src: certOeko.url, alt: "OEKO-TEX STeP" },
-  { placeholder: true },
   { src: cert22.url, alt: "PME Líder 2022" },
   { src: cert23.url, alt: "PME Líder 2023" },
   { src: cert24.url, alt: "PME Líder 2024" },
