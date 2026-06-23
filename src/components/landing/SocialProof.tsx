@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import bgAsset from "@/assets/sobre-nos-bg.jpeg.asset.json";
 
 const stats = [
   { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot" },
@@ -47,13 +48,15 @@ function Stat({
 }) {
   const n = useCountUp(value, visible);
   return (
-    <div className="text-center">
-      <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl">
-        {prefix}
-        {formatNumber(n, format)}
-        {suffix}
+    <div className="flex h-full flex-col text-center">
+      <div className="flex-1 flex items-center justify-center">
+        <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl py-8">
+          {prefix}
+          {formatNumber(n, format)}
+          {suffix}
+        </div>
       </div>
-      <p className="mt-4 text-[20px] leading-[28px] font-light text-white max-w-[260px] mx-auto">
+      <p className="text-[20px] leading-[28px] font-light text-white max-w-[260px] mx-auto">
         {label}
       </p>
     </div>
@@ -75,8 +78,20 @@ export function SocialProof() {
   }, []);
 
   return (
-    <section id="sobre" className="bg-brand-black py-24 lg:py-32">
-      <div ref={ref} className="mx-auto max-w-7xl px-6 lg:px-12">
+    <section
+      id="sobre"
+      className="relative bg-brand-black py-24 lg:py-32 overflow-hidden"
+    >
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-cover bg-center opacity-30"
+        style={{ backgroundImage: `url(${bgAsset.url})` }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-b from-brand-black/80 via-brand-black/60 to-brand-black"
+      />
+      <div ref={ref} className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
             <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
@@ -87,9 +102,9 @@ export function SocialProof() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15">
+        <div className="mt-20 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15 items-stretch">
           {stats.map((s, idx) => (
-            <div key={idx} className="lg:px-8">
+            <div key={idx} className="lg:px-8 min-h-[260px]">
               <Stat {...s} visible={visible} />
             </div>
           ))}
