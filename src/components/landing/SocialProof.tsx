@@ -108,13 +108,14 @@ export function SocialProof() {
           </h2>
         </div>
 
-        <div className="mt-20 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15 items-stretch">
+        <div className="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 items-stretch">
           {stats.map((s, idx) => (
-            <div key={idx} className="lg:px-8 min-h-[260px]">
+            <div key={idx} className="rounded-2xl bg-white/5 border border-white/10 px-6 py-10 lg:px-8 lg:py-12 min-h-[300px] flex items-center justify-center">
               <Stat {...s} visible={visible} />
             </div>
           ))}
         </div>
+
 
       </div>
     </section>
