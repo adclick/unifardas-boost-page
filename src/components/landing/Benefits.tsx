@@ -48,17 +48,17 @@ export function Benefits() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-px bg-brand-black/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map(({ id, icon, title, alt, desc }) => (
             <div
               key={id}
               className="group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
             >
               <img src={icon} alt={alt} className="h-14 w-14" aria-hidden />
-              <h3 className="mt-6 text-[32px] font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">
+              <h3 className="mt-6 text-[28px] font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">
                 {title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-gray transition-colors group-hover:text-white/80">
+              <p className="mt-3 text-[20px] font-normal leading-[36px] text-brand-gray transition-colors group-hover:text-white/80">
                 {desc}
               </p>
             </div>
