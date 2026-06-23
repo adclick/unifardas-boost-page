@@ -3,7 +3,8 @@ import logo from "@/assets/unifardas-logo-2019.png.asset.json";
 const nav = [
   { href: "#solucoes", label: "Soluções" },
   { href: "#setores", label: "Setores" },
-  { href: "#reviews", label: "Reviews" },
+  { href: "#sobre", label: "Sobre" },
+  { href: "#clientes", label: "Clientes" },
 ];
 
 export function LandingHeader() {
@@ -22,7 +23,7 @@ export function LandingHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="relative text-sm font-semibold uppercase tracking-wider text-brand-black transition-colors hover:text-brand-red after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-brand-red after:transition-all hover:after:w-full"
+              className="relative text-sm font-semibold text-brand-black transition-colors hover:text-brand-red after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-brand-red after:transition-all hover:after:w-full"
             >
               {item.label}
             </a>
