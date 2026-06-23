@@ -44,9 +44,9 @@ export function LandingFooter() {
             <img
               src={iconAsset.url}
               alt="Unifardas"
-              className="h-16 w-auto brightness-0 invert"
+              className="h-12 w-auto brightness-0 invert"
             />
-            <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/75">
+            <p className="mt-8 max-w-xl text-sm leading-relaxed text-white/75">
               A Unifardas é uma empresa portuguesa com sólida experiência e
               tradição no setor do vestuário profissional, dedicada à produção
               e comercialização todo o tipo de fardas, uniformes, batas,
@@ -59,16 +59,16 @@ export function LandingFooter() {
 
           {/* Right: Certifications */}
           <div>
-            <h2 className="text-[32px] font-semibold leading-tight text-white">
+            <h2 className="text-[28px] font-normal leading-[1.1] text-white">
               Certificações.
               <br />
               A prova de confiança.
             </h2>
-            <div className="mt-6 grid grid-cols-4 gap-3">
+            <div className="mt-8 grid grid-cols-4 gap-2">
               {certifications.map(({ src, alt }) => (
                 <div
                   key={alt}
-                  className="flex h-20 w-20 items-center justify-center rounded-md bg-white/90 p-2"
+                  className="flex h-14 w-14 items-center justify-center rounded-md bg-white/90 p-1.5"
                 >
                   <img
                     src={src}
