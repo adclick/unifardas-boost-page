@@ -72,21 +72,17 @@ export function SocialProof() {
       <div ref={ref} className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/20 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/30">
+            <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
               <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
               Sobre nós
             </span>
             <h2 className="mt-4 text-[40px] font-bold tracking-tight text-white">
-              Tradição e exigência no vestuário profissional.
+              Os números falam por nós! São mais de....
             </h2>
             <p className="mt-6 text-base leading-relaxed text-white/75">
-              A Unifardas é uma empresa portuguesa com sólida experiência e
-              tradição no setor do vestuário profissional, dedicada ao
-              desenvolvimento e produção de fardas, uniformes, EPIs e vestuário
-              técnico. Especializada em soluções personalizadas, adapta cada
-              produto à identidade de cada empresa, garantindo qualidade,
-              funcionalidade e elevados padrões de exigência em todos os
-              projetos.
+              A UNIFARDAS® é uma empresa Portuguesa, dotada de uma sólida
+              experiência e de uma larga tradição no sector de vestuário
+              profissional.
             </p>
           </div>
 
