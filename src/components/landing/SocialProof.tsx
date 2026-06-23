@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { Award, Shirt, Building2, Heart } from "lucide-react";
 import bgAsset from "@/assets/sobre-nos-bg.jpeg.asset.json";
 
 const stats = [
-  { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot" },
-  { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain" },
-  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem nossos artigos", format: "dot" },
-  { value: 95, prefix: "", suffix: "%", label: "de clientes com elevado grau de satisfação", format: "plain" },
+  { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot", icon: Award },
+  { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain", icon: Shirt },
+  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem nossos artigos", format: "dot", icon: Building2 },
+  { value: 95, prefix: "", suffix: "%", label: "de clientes com elevado grau de satisfação", format: "plain", icon: Heart },
 ];
+
 
 function useCountUp(target: number, start: boolean, duration = 1600) {
   const [n, setN] = useState(0);
@@ -38,6 +40,7 @@ function Stat({
   label,
   format,
   visible,
+  icon: Icon,
 }: {
   value: number;
   prefix: string;
@@ -45,23 +48,26 @@ function Stat({
   label: ReactNode;
   format: string;
   visible: boolean;
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
 }) {
   const n = useCountUp(value, visible);
   return (
-    <div className="flex h-full flex-col text-center">
-      <div className="flex-1 flex items-center justify-center">
-        <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl py-8">
-          {prefix}
-          {formatNumber(n, format)}
-          {suffix}
-        </div>
+    <div className="flex h-full flex-col items-center text-center">
+      <div className="mb-4 inline-flex items-center justify-center rounded-full bg-white/10 p-4 ring-1 ring-white/20">
+        <Icon className="size-8 text-brand-red" strokeWidth={1.5} />
       </div>
-      <p className="text-[20px] leading-[28px] font-light text-white max-w-[260px] mx-auto">
+      <div className="text-brand-red font-bold tracking-tight text-6xl sm:text-7xl lg:text-8xl">
+        {prefix}
+        {formatNumber(n, format)}
+        {suffix}
+      </div>
+      <p className="mt-4 text-[22px] leading-[30px] font-light text-white max-w-[280px] mx-auto">
         {label}
       </p>
     </div>
   );
 }
+
 
 
 export function SocialProof() {
@@ -102,13 +108,14 @@ export function SocialProof() {
           </h2>
         </div>
 
-        <div className="mt-20 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15 items-stretch">
+        <div className="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 items-stretch">
           {stats.map((s, idx) => (
-            <div key={idx} className="lg:px-8 min-h-[260px]">
+            <div key={idx} className="rounded-2xl bg-white/5 border border-white/10 px-6 py-10 lg:px-8 lg:py-12 min-h-[300px] flex items-center justify-center">
               <Stat {...s} visible={visible} />
             </div>
           ))}
         </div>
+
 
       </div>
     </section>
