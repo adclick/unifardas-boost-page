@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const stats = [
-  { value: 10000, prefix: "", suffix: "", label: "referências em fardas profissionais", format: "dot" },
-  { value: 500, prefix: "", suffix: "", label: "peças produzidas todos os dias", format: "plain" },
-  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem os artigos da Unifardas", format: "dot" },
+  { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot" },
+  { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain" },
+  { value: 10000, prefix: "", suffix: "", label: "entidades que conhecem nossos artigos", format: "dot" },
   { value: 95, prefix: "", suffix: "%", label: "de clientes com elevado grau de satisfação", format: "plain" },
 ];
 
@@ -41,7 +41,7 @@ function Stat({
   value: number;
   prefix: string;
   suffix: string;
-  label: string;
+  label: ReactNode;
   format: string;
   visible: boolean;
 }) {
@@ -88,8 +88,8 @@ export function SocialProof() {
         </div>
 
         <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15">
-          {stats.map((s) => (
-            <div key={s.label} className="lg:px-8">
+          {stats.map((s, idx) => (
+            <div key={idx} className="lg:px-8">
               <Stat {...s} visible={visible} />
             </div>
           ))}
