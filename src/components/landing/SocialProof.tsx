@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const stats = [
   { value: 10000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot" },
