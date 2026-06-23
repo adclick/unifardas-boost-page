@@ -62,28 +62,20 @@ export function LandingFooter() {
               <br />
               A prova de confiança.
             </h2>
-            <div className="mt-8 grid grid-cols-[repeat(4,4rem)] gap-px">
-              {certifications.map((item, index) =>
-                "placeholder" in item ? (
-                  <div
-                    key={`placeholder-${index}`}
-                    className="h-16 w-full"
-                    aria-hidden="true"
+            <div className="mt-8 grid grid-cols-[repeat(7,4rem)] gap-px">
+              {certifications.map((item) => (
+                <div
+                  key={item.alt}
+                  className="flex h-16 w-full items-center justify-center rounded-sm bg-white/90 p-0.5"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
                   />
-                ) : (
-                  <div
-                    key={item.alt}
-                    className="flex h-16 w-full items-center justify-center rounded-sm bg-white/90 p-0.5"
-                  >
-                    <img
-                      src={item.src}
-                      alt={item.alt}
-                      className="max-h-full max-w-full object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                )
-              )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
