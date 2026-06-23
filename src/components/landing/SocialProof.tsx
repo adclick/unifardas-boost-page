@@ -84,7 +84,7 @@ export function SocialProof() {
     >
       <div
         aria-hidden
-        className="absolute inset-0 bg-cover bg-center opacity-40"
+        className="absolute inset-0 bg-cover bg-center opacity-70"
         style={{ backgroundImage: `url(${bgAsset.url})` }}
       />
       <div
