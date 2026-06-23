@@ -80,16 +80,16 @@ export function SocialProof() {
   return (
     <section
       id="sobre"
-      className="relative bg-brand-black py-24 lg:py-32 overflow-hidden"
+      className="relative bg-black py-24 lg:py-32 overflow-hidden"
     >
       <div
         aria-hidden
-        className="absolute inset-0 bg-cover bg-center opacity-30"
+        className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: `url(${bgAsset.url})` }}
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-brand-black/80 via-brand-black/60 to-brand-black"
+        className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/90"
       />
       <div ref={ref} className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="flex flex-col items-center text-center">
