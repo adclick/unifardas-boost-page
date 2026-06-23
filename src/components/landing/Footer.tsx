@@ -27,7 +27,7 @@ export function LandingFooter() {
       <div className="border-b border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 py-10 lg:flex-row lg:items-center lg:px-12">
           <p className="text-[36px] font-semibold text-white leading-tight">
-            Junte-se aos mais de 500 clientes satisfeitos
+            Junte-se aos mais de 10k clientes satisfeitos
           </p>
           <a
             href="#orcamento"
