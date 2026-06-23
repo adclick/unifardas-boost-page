@@ -99,6 +99,7 @@ function LandingPage() {
 
         <Benefits />
         <SectorMosaic />
+        <SocialProof />
         <TestimonialsCarousel />
       </main>
       <LandingFooter />
