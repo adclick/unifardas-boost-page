@@ -126,7 +126,9 @@ export function TestimonialsCarousel() {
         ))}
       </div>
 
-      <ClientsMarquee />
+      <div className="mt-20 lg:mt-24">
+        <ClientsMarquee />
+      </div>
 
       </div>
     </section>
