@@ -258,6 +258,11 @@ export function QuoteForm() {
             {...register("pedido")}
             className={`mt-2 resize-none ${inputBase}`}
           />
+          {errors.pedido && (
+            <p className="mt-1 text-xs text-brand-red">
+              {errors.pedido.message}
+            </p>
+          )}
         </div>
 
         <label className="flex cursor-pointer items-start gap-3">
