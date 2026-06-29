@@ -61,7 +61,7 @@ export function ClientsMarquee() {
                 src={l.src}
                 alt={l.alt}
                 loading="lazy"
-                className="max-h-24 max-w-[180px] object-contain grayscale opacity-70 transition hover:grayscale-0 hover:opacity-100"
+                className="max-h-24 max-w-[180px] object-contain"
               />
             </div>
           ))}
