@@ -58,6 +58,8 @@ export function QuoteForm() {
     defaultValues: {
       perfil: "empresa",
       nome: "",
+      empresaNome: "",
+      nif: "",
       telefone: "",
       email: "",
       pedido: "",
