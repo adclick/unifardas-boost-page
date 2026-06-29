@@ -6,22 +6,40 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { Loader2, ArrowRight } from "lucide-react";
 
-const schema = z.object({
-  nome: z.string().trim().min(2, "Indique o seu nome").max(120),
-  perfil: z.enum(["empresa", "individual"]),
-  telefone: z
-    .string()
-    .trim()
-    .max(30)
-    .regex(/^[+0-9()\s-]*$/, "Telefone inválido")
-    .optional()
-    .or(z.literal("")),
-  email: z.string().trim().email("E-mail inválido").max(255),
-  pedido: z.string().trim().max(1000).optional().or(z.literal("")),
-  consentimento: z.boolean().refine((v) => v === true, {
-    message: "Tem de aceitar a política de privacidade para continuar",
-  }),
-});
+const schema = z
+  .object({
+    nome: z.string().trim().min(2, "Indique o seu nome").max(120),
+    perfil: z.enum(["empresa", "individual"]),
+    empresaNome: z.string().trim().max(120).optional().or(z.literal("")),
+    nif: z
+      .string()
+      .trim()
+      .max(30)
+      .regex(/^[0-9]{0,9}$/, "NIF inválido")
+      .optional()
+      .or(z.literal("")),
+    telefone: z
+      .string()
+      .trim()
+      .max(30)
+      .regex(/^[+0-9()\s-]*$/, "Telefone inválido")
+      .optional()
+      .or(z.literal("")),
+    email: z.string().trim().email("E-mail inválido").max(255),
+    pedido: z.string().trim().max(1000).optional().or(z.literal("")),
+    consentimento: z.boolean().refine((v) => v === true, {
+      message: "Tem de aceitar a política de privacidade para continuar",
+    }),
+  })
+  .refine(
+    (data) =>
+      data.perfil !== "empresa" ||
+      (data.empresaNome !== undefined && data.empresaNome.trim().length >= 2),
+    {
+      message: "Indique o nome da empresa",
+      path: ["empresaNome"],
+    },
+  );
 
 type FormValues = z.infer<typeof schema>;
 
