@@ -152,6 +152,53 @@ export function QuoteForm() {
           </div>
         </div>
 
+        {perfil === "empresa" && (
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label
+                htmlFor="empresaNome"
+                className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
+              >
+                Nome Empresa*
+              </label>
+              <input
+                id="empresaNome"
+                type="text"
+                autoComplete="organization"
+                placeholder="Nome da empresa"
+                {...register("empresaNome")}
+                className={`mt-2 ${inputBase}`}
+              />
+              {errors.empresaNome && (
+                <p className="mt-1 text-xs text-brand-red">
+                  {errors.empresaNome.message}
+                </p>
+              )}
+            </div>
+            <div>
+              <label
+                htmlFor="nif"
+                className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
+              >
+                NIF
+              </label>
+              <input
+                id="nif"
+                type="text"
+                inputMode="numeric"
+                placeholder="NIF"
+                {...register("nif")}
+                className={`mt-2 ${inputBase}`}
+              />
+              {errors.nif && (
+                <p className="mt-1 text-xs text-brand-red">
+                  {errors.nif.message}
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label
