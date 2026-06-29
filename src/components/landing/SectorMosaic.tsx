@@ -1,9 +1,15 @@
-import industria from "@/assets/sector-industria.jpg";
-import saude from "@/assets/sector-saude.jpg";
+import industriaAsset from "@/assets/sector-industria.webp.asset.json";
+import saudeAsset from "@/assets/sector-saude.webp.asset.json";
 import hotelaria from "@/assets/sector-hotelaria.jpg";
-import restauracao from "@/assets/sector-restauracao.jpg";
-import ensino from "@/assets/sector-ensino.jpg";
-import corporate from "@/assets/sector-corporate.jpg";
+import restauracaoAsset from "@/assets/sector-restauracao.webp.asset.json";
+import ensinoAsset from "@/assets/sector-ensino.webp.asset.json";
+import corporateAsset from "@/assets/sector-corporate.webp.asset.json";
+
+const industria = industriaAsset.url;
+const saude = saudeAsset.url;
+const restauracao = restauracaoAsset.url;
+const ensino = ensinoAsset.url;
+const corporate = corporateAsset.url;
 import { ArrowRight } from "lucide-react";
 
 const sectors = [
