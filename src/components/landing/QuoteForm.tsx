@@ -26,7 +26,7 @@ const schema = z
       .optional()
       .or(z.literal("")),
     email: z.string().trim().email("E-mail inválido").max(255),
-    pedido: z.string().trim().max(1000).optional().or(z.literal("")),
+    pedido: z.string().trim().min(10, "Descreva o seu pedido").max(1000),
     consentimento: z.boolean().refine((v) => v === true, {
       message: "Tem de aceitar a política de privacidade para continuar",
     }),
