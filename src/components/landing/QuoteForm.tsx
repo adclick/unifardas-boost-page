@@ -26,7 +26,7 @@ const schema = z
       .optional()
       .or(z.literal("")),
     email: z.string().trim().email("E-mail inválido").max(255),
-    pedido: z.string().trim().max(1000).optional().or(z.literal("")),
+    pedido: z.string().trim().min(10, "Descreva o seu pedido").max(1000),
     consentimento: z.boolean().refine((v) => v === true, {
       message: "Tem de aceitar a política de privacidade para continuar",
     }),
@@ -249,7 +249,7 @@ export function QuoteForm() {
             htmlFor="pedido"
             className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
           >
-            Pedido (Opcional)
+            Faça o seu pedido*
           </label>
           <textarea
             id="pedido"
@@ -258,6 +258,11 @@ export function QuoteForm() {
             {...register("pedido")}
             className={`mt-2 resize-none ${inputBase}`}
           />
+          {errors.pedido && (
+            <p className="mt-1 text-xs text-brand-red">
+              {errors.pedido.message}
+            </p>
+          )}
         </div>
 
         <label className="flex cursor-pointer items-start gap-3">
