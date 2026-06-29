@@ -249,7 +249,7 @@ export function QuoteForm() {
             htmlFor="pedido"
             className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
           >
-            Pedido (Opcional)
+            Faça o seu pedido*
           </label>
           <textarea
             id="pedido"
