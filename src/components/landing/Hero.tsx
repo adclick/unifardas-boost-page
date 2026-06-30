@@ -4,7 +4,6 @@ export function Hero() {
   return (
     <section id="top">
       <span className="mb-6 inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold tracking-widest text-brand-red uppercase ring-1 ring-brand-red/20">
-        <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
         Vestuário Profissional Premium
       </span>
       <h1 className="text-balance text-[48px] font-semibold leading-tight tracking-tight text-brand-black">
