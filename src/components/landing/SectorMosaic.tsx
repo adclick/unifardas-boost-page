@@ -73,7 +73,7 @@ export function SectorMosaic() {
             <h3 className="text-[32px] font-bold tracking-tight text-white">
               O seu setor não está aqui?
             </h3>
-            <p className="max-w-xl text-[20px] leading-tight text-white/75">
+            <p className="max-w-3xl text-[20px] leading-tight text-white/75">
               Criamos soluções à medida para qualquer atividade profissional.
             </p>
           </div>
