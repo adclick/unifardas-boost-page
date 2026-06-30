@@ -40,7 +40,6 @@ export function Benefits() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/20">
-            <span className="size-1.5 rounded-full bg-brand-red animate-pulse" />
             Vantagens
           </span>
           <h2 className="mt-4 text-[40px] font-semibold leading-tight tracking-tight text-brand-black">
