@@ -37,7 +37,7 @@ function LandingPage() {
       className="min-h-screen bg-background font-sans text-brand-black selection:bg-brand-red selection:text-white"
     >
       <LandingHeader />
-      <main className="pt-20">
+      <main className="">
         {/* HERO with background image */}
         <section className="relative isolate overflow-hidden">
           {/* bg image */}
