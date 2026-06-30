@@ -60,7 +60,6 @@ function LandingPage() {
             <div className="flex flex-col justify-between lg:col-span-7 text-white">
               <div>
                 <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
-                  <span className="size-1.5 rounded-full bg-white animate-pulse" />
                   Fardas profissionais personalizadas
                 </span>
                 <h1 className="mt-8 text-balance text-[48px] font-bold leading-[1.05] tracking-tight text-white">
