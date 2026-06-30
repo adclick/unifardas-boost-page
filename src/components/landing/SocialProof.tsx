@@ -4,7 +4,7 @@ import bgAsset from "@/assets/sobre-nos-bg-new.jpeg.asset.json";
 const stats = [
   { value: 20000, prefix: "", suffix: "", label: <>referências em<br />fardas profissionais</>, format: "dot" },
   { value: 500, prefix: "", suffix: "", label: <>peças produzidas<br />todos os dias</>, format: "plain" },
-  { value: 20000, prefix: "", suffix: "", label: <>entidades que conhecem<br />os artigos da Unifardas</>, format: "dot" },
+  { value: 10000, prefix: "", suffix: "", label: <>entidades que conhecem<br />os artigos da Unifardas</>, format: "dot" },
   { value: 95, prefix: "", suffix: "%", label: <>de clientes com elevado<br />grau de satisfação</>, format: "plain" },
 ];
 
