@@ -9,7 +9,7 @@ const nav = [
 
 export function LandingHeader() {
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md ring-1 ring-black/5">
+    <header className="w-full bg-white/95 backdrop-blur-md ring-1 ring-black/5">
       <div className="flex h-20 w-full items-center justify-between px-4 lg:px-8">
         <a href="#top" className="flex items-center" aria-label="Unifardas">
           <img
