@@ -16,7 +16,7 @@ const sectors = [
   { label: "Indústria", src: industria },
   { label: "Saúde e bem-estar", src: saude },
   { label: "Hotelaria", src: hotelaria },
-  { label: "Restauração", src: restauracao },
+  { label: "Restauração e hotelaria", src: restauracao },
   { label: "Ensino", src: ensino },
   { label: "Corporate e serviços", src: corporate },
 ];
