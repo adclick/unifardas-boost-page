@@ -19,7 +19,7 @@ const sectors = [
   { label: "Serviços", src: servicos },
   { label: "Restauração e hotelaria", src: restauracao },
   { label: "Ensino", src: ensino },
-  { label: "Corporate e serviços", src: corporate },
+  { label: "Corporate", src: corporate },
 ];
 
 export function SectorMosaic() {
