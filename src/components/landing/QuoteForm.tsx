@@ -72,14 +72,30 @@ export function QuoteForm() {
 
   const onSubmit = async (values: FormValues) => {
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 700));
-    console.log("Quote request:", values);
-    toast.success("Pedido enviado!", {
-      description: "A nossa equipa entra em contacto em menos de 24 horas úteis.",
-    });
-    reset();
-    setSubmitting(false);
-    navigate({ to: "/obrigado" });
+    try {
+      const res = await fetch("https://n8n.adc-services.eu/webhook/unifardas-wp-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          source: "unifardas-landing",
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+      if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+      toast.success("Pedido enviado!", {
+        description: "A nossa equipa entra em contacto em menos de 24 horas úteis.",
+      });
+      reset();
+      navigate({ to: "/obrigado" });
+    } catch (err) {
+      console.error("Quote submission failed:", err);
+      toast.error("Não foi possível enviar o pedido", {
+        description: "Tente novamente ou contacte-nos diretamente.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputBase =
