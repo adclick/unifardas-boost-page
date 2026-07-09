@@ -43,6 +43,59 @@ const schema = z
 
 type FormValues = z.infer<typeof schema>;
 
+type WebhookPayload = {
+  name: string;
+  email: string;
+  phone?: string;
+  profile: "Empresa" | "Individual";
+  company_name?: string;
+  industry_sector?: string;
+  message: string;
+  campaign?: string;
+  source: "landing-page";
+  fields?: {
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+  };
+};
+
+function buildWebhookPayload(values: FormValues): WebhookPayload {
+  const params = new URLSearchParams(window.location.search);
+
+  const fields: WebhookPayload["fields"] = {};
+  for (const key of ["utm_source", "utm_medium", "utm_campaign"] as const) {
+    const value = params.get(key)?.trim();
+    if (value) fields[key] = value;
+  }
+
+  const payload: WebhookPayload = {
+    name: values.nome,
+    email: values.email,
+    profile: values.perfil === "empresa" ? "Empresa" : "Individual",
+    message: values.pedido,
+    source: "landing-page",
+  };
+
+  const phone = values.telefone?.trim();
+  if (phone) payload.phone = phone;
+
+  if (values.perfil === "empresa") {
+    const companyName = values.empresaNome?.trim();
+    if (companyName) payload.company_name = companyName;
+  }
+
+  const industrySector = params.get("industry_sector")?.trim();
+  if (industrySector) payload.industry_sector = industrySector;
+
+  const campaign = params.get("campaign")?.trim();
+  if (campaign) payload.campaign = campaign;
+
+  if (Object.keys(fields).length > 0) payload.fields = fields;
+
+  return payload;
+}
+
 export function QuoteForm() {
   const [submitting, setSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -76,11 +129,7 @@ export function QuoteForm() {
       const res = await fetch("https://n8n.adc-services.eu/webhook/unifardas-wp-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...values,
-          source: "unifardas-landing",
-          submittedAt: new Date().toISOString(),
-        }),
+        body: JSON.stringify(buildWebhookPayload(values)),
       });
       if (!res.ok) throw new Error(`Request failed: ${res.status}`);
       toast.success("Pedido enviado!", {
