@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, Link } from "@tanstack/react-router";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Loader2, ArrowRight } from "lucide-react";
+
 
 const schema = z
   .object({
@@ -26,7 +27,7 @@ const schema = z
       .optional()
       .or(z.literal("")),
     email: z.string().trim().email("E-mail inválido").max(255),
-    pedido: z.string().trim().min(10, "Descreva o seu pedido").max(1000),
+    pedido: z.string().trim().min(1, "Descreva o seu pedido").max(1000),
     consentimento: z.boolean().refine((v) => v === true, {
       message: "Tem de aceitar a política de privacidade para continuar",
     }),
@@ -98,6 +99,8 @@ function buildWebhookPayload(values: FormValues): WebhookPayload {
 
 export function QuoteForm() {
   const [submitting, setSubmitting] = useState(false);
+  const submitLockRef = useRef(false);
+
   const navigate = useNavigate();
   const {
     register,
@@ -124,6 +127,8 @@ export function QuoteForm() {
   const consentimento = watch("consentimento");
 
   const onSubmit = async (values: FormValues) => {
+    if (submitLockRef.current) return;
+    submitLockRef.current = true;
     setSubmitting(true);
     try {
       const res = await fetch("https://n8n.adc-services.eu/webhook/unifardas-wp-lead", {
@@ -142,10 +147,12 @@ export function QuoteForm() {
       toast.error("Não foi possível enviar o pedido", {
         description: "Tente novamente ou contacte-nos diretamente.",
       });
+      submitLockRef.current = false;
     } finally {
       setSubmitting(false);
     }
   };
+
 
   const inputBase =
     "block w-full border-2 border-brand-light bg-white px-4 py-3 text-sm text-brand-black placeholder:text-brand-gray/60 focus:border-brand-red focus:outline-none transition-colors";
@@ -163,7 +170,14 @@ export function QuoteForm() {
           Resposta em menos de 24 horas úteis.
         </p>
       </div>
-      <form className="space-y-5 p-7" onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form
+        className="space-y-5 p-7"
+        onSubmit={(e) => {
+          e.stopPropagation();
+          void handleSubmit(onSubmit)(e);
+        }}
+        noValidate
+      >
         <div>
           <label
             htmlFor="nome"
