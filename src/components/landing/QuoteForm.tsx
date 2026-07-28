@@ -99,6 +99,8 @@ function buildWebhookPayload(values: FormValues): WebhookPayload {
 
 export function QuoteForm() {
   const [submitting, setSubmitting] = useState(false);
+  const submitLockRef = useRef(false);
+
   const navigate = useNavigate();
   const {
     register,
