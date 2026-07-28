@@ -170,7 +170,14 @@ export function QuoteForm() {
           Resposta em menos de 24 horas úteis.
         </p>
       </div>
-      <form className="space-y-5 p-7" onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form
+        className="space-y-5 p-7"
+        onSubmit={(e) => {
+          e.stopPropagation();
+          void handleSubmit(onSubmit)(e);
+        }}
+        noValidate
+      >
         <div>
           <label
             htmlFor="nome"
