@@ -46,6 +46,7 @@ type FormValues = z.infer<typeof schema>;
 
 type WebhookPayload = {
   name: string;
+  nif?: string;
   email: string;
   phone?: string;
   profile: "Empresa" | "Individual";
@@ -74,6 +75,7 @@ function buildWebhookPayload(values: FormValues): WebhookPayload {
     name: values.nome,
     email: values.email,
     profile: values.perfil === "empresa" ? "Empresa" : "Individual",
+	nif: values.nif,
     message: values.pedido,
     source: "landing-page",
   };
