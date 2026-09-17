@@ -46,9 +46,9 @@ export function ClientsMarquee() {
         className="relative group"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+            "linear-gradient(to right, transparent, black 14%, black 86%, transparent)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+            "linear-gradient(to right, transparent, black 14%, black 86%, transparent)",
         }}
       >
         <div className="flex w-max animate-marquee gap-6 group-hover:[animation-play-state:paused]">
