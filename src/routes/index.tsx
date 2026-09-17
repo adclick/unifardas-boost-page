@@ -25,6 +25,7 @@ export const Route = createFileRoute("/")({
           "Fardas que valorizam a imagem da sua empresa. Produção nacional, personalização total e resposta em 24h.",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: LandingPage,

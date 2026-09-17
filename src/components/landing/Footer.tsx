@@ -49,7 +49,7 @@ export function LandingFooter() {
               className="h-12 w-auto brightness-0 invert"
             />
             <p className="mt-8 max-w-xl text-sm leading-relaxed text-white/75">
-              A UNIFARDAS® é uma empresa Portuguesa, dotada de uma sólida
+              A UNIFARDAS® é uma empresa Portuguesa, dotada de uma sólida{" "}
               <br className="hidden sm:block" />
               experiência e de uma larga tradição no sector de vestuário profissional.
             </p>

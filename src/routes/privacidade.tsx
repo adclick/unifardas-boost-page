@@ -12,6 +12,13 @@ export const Route = createFileRoute("/privacidade")({
         content:
           "Política de privacidade da Unifardas. Saiba como recolhemos, usamos e protegemos os seus dados pessoais.",
       },
+      { property: "og:title", content: "Política de Privacidade — Unifardas" },
+      {
+        property: "og:description",
+        content: "Consulte como a Unifardas recolhe, utiliza e protege os seus dados pessoais.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: PrivacyPage,
