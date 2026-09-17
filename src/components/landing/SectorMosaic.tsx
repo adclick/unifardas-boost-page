@@ -24,14 +24,14 @@ const sectors = [
 
 export function SectorMosaic() {
   return (
-    <section id="setores" className="bg-white py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
+    <section id="setores" className="bg-white py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
+        <div className="grid gap-6 sm:gap-12 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/20">
               Setores
             </span>
-            <h2 className="mt-4 text-[40px] font-bold tracking-tight text-brand-black">
+            <h2 className="mt-4 text-[32px] font-bold leading-tight tracking-tight text-brand-black sm:text-[40px]">
               Setores que vestimos
             </h2>
           </div>
@@ -41,7 +41,7 @@ export function SectorMosaic() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-6 lg:grid-cols-3">
           {sectors.map((s) => (
             <figure
               key={s.label}
@@ -56,9 +56,9 @@ export function SectorMosaic() {
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+              <figcaption className="absolute inset-x-0 bottom-0 p-3 sm:p-6">
                 <span className="block h-0.5 w-10 bg-brand-red transition-all duration-500 group-hover:w-20" />
-                <p className="mt-3 text-base font-bold uppercase tracking-wide text-white sm:text-lg">
+                <p className="mt-3 break-words text-sm font-bold uppercase leading-tight tracking-wide text-white sm:text-lg">
                   {s.label}
                 </p>
               </figcaption>
@@ -67,9 +67,9 @@ export function SectorMosaic() {
         </div>
 
         {/* CTA Block */}
-        <div className="mt-16 flex flex-col items-start gap-6 bg-brand-red p-8 sm:flex-row sm:items-center sm:justify-between sm:p-12">
-          <div>
-            <h3 className="text-[32px] font-bold tracking-tight text-white">
+        <div className="mt-12 flex flex-col items-start gap-6 bg-brand-red p-6 sm:mt-16 sm:flex-row sm:items-center sm:justify-between sm:p-12">
+          <div className="min-w-0">
+            <h3 className="text-[28px] font-bold leading-tight tracking-tight text-white sm:text-[32px]">
               O seu setor não está aqui?
             </h3>
             <p className="max-w-3xl text-[20px] leading-tight text-white/75">

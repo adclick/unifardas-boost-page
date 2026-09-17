@@ -164,8 +164,8 @@ export function QuoteForm() {
       id="orcamento"
       className="overflow-hidden bg-white shadow-2xl shadow-black/40 ring-1 ring-black/5"
     >
-      <div className="bg-brand-red px-7 py-6">
-        <h3 className="text-[32px] font-bold leading-[0.9] tracking-tight text-white">
+      <div className="bg-brand-red px-5 py-6 sm:px-7">
+        <h3 className="text-[28px] font-bold leading-none tracking-tight text-white sm:text-[32px]">
           Peça o seu orçamento
         </h3>
         <p className="mt-1 text-base text-white/85">
@@ -173,7 +173,7 @@ export function QuoteForm() {
         </p>
       </div>
       <form
-        className="space-y-5 p-7"
+        className="space-y-5 p-5 sm:p-7"
         onSubmit={(e) => {
           e.stopPropagation();
           void handleSubmit(onSubmit)(e);
