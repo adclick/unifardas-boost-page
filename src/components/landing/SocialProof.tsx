@@ -77,7 +77,7 @@ export function SocialProof() {
   return (
     <section
       id="sobre"
-      className="relative bg-black py-24 lg:py-32 overflow-hidden"
+      className="relative overflow-hidden bg-black py-16 sm:py-24 lg:py-32"
     >
       <div
         aria-hidden
@@ -88,17 +88,17 @@ export function SocialProof() {
         aria-hidden
         className="absolute inset-0 bg-black/55"
       />
-      <div ref={ref} className="relative mx-auto max-w-7xl px-6 lg:px-12">
+      <div ref={ref} className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
         <div className="flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
             Unifardas
           </span>
-          <h2 className="mt-6 text-[40px] font-bold tracking-tight text-white whitespace-nowrap">
+          <h2 className="mt-6 text-balance text-[32px] font-bold leading-tight tracking-tight text-white sm:text-[40px] lg:whitespace-nowrap">
             Os números falam por nós! São mais de....
           </h2>
         </div>
 
-        <div className="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 items-stretch lg:divide-x lg:divide-white/15">
+        <div className="mt-14 grid items-stretch gap-10 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/15">
           {stats.map((s, idx) => (
             <Stat key={idx} {...s} visible={visible} />
           ))}

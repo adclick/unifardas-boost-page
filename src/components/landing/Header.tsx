@@ -10,20 +10,20 @@ const nav = [
 export function LandingHeader() {
   return (
     <header className="w-full bg-white/95 backdrop-blur-md ring-1 ring-black/5">
-      <div className="flex h-20 w-full items-center justify-between px-4 lg:px-8">
-        <a href="#top" className="flex items-center" aria-label="Unifardas">
+      <div className="grid min-h-20 w-full grid-cols-[auto_minmax(0,1fr)] items-center gap-3 px-5 sm:flex sm:justify-between sm:px-6 lg:px-8">
+        <a href="#top" className="flex shrink-0 items-center" aria-label="Unifardas">
           <img
             src={logo.url}
             alt="Unifardas"
-            className="h-16 w-auto md:h-20"
+            className="h-14 w-auto sm:h-16 md:h-20"
           />
         </a>
-        <nav className="flex items-center gap-2 sm:gap-8">
+        <nav className="flex min-w-0 items-center justify-end gap-2 sm:gap-8">
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="relative text-sm font-semibold text-brand-black transition-colors hover:text-brand-red after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-brand-red after:transition-all hover:after:w-full"
+              className="relative whitespace-nowrap text-[11px] font-semibold text-brand-black transition-colors hover:text-brand-red after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-brand-red after:transition-all hover:after:w-full sm:text-sm"
             >
               {item.label}
             </a>

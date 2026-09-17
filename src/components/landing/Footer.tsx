@@ -25,8 +25,8 @@ export function LandingFooter() {
     <footer className="bg-brand-black text-white">
       {/* Top CTA */}
       <div className="border-b border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 py-10 lg:flex-row lg:items-center lg:px-12">
-          <p className="text-[36px] font-semibold text-white leading-tight">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-10 sm:px-6 lg:flex-row lg:items-center lg:px-12">
+          <p className="text-[30px] font-semibold leading-tight text-white sm:text-[36px]">
             Junte-se aos mais de 10k clientes satisfeitos
           </p>
           <a
@@ -39,8 +39,8 @@ export function LandingFooter() {
       </div>
 
       {/* Main footer: 50/50 */}
-      <div className="mx-auto max-w-7xl px-6 py-14 lg:px-12">
-        <div className="grid items-start gap-20 md:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-12">
+        <div className="grid items-start gap-14 md:grid-cols-2 md:gap-20">
           {/* Left: Company */}
           <div>
             <img
@@ -49,8 +49,8 @@ export function LandingFooter() {
               className="h-12 w-auto brightness-0 invert"
             />
             <p className="mt-8 max-w-xl text-sm leading-relaxed text-white/75">
-              A UNIFARDAS® é uma empresa Portuguesa, dotada de uma sólida
-              <br />
+              A UNIFARDAS® é uma empresa Portuguesa, dotada de uma sólida{" "}
+              <br className="hidden sm:block" />
               experiência e de uma larga tradição no sector de vestuário profissional.
             </p>
           </div>
@@ -62,7 +62,7 @@ export function LandingFooter() {
               <br />
               A prova de confiança.
             </h2>
-            <div className="mt-8 grid grid-cols-[repeat(7,4rem)] gap-px">
+            <div className="mt-8 grid grid-cols-4 gap-1 sm:grid-cols-7 sm:gap-px">
               {certifications.map((item) => (
                 <div
                   key={item.alt}

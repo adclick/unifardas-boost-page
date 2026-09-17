@@ -36,22 +36,22 @@ const items = [
 
 export function Benefits() {
   return (
-    <section id="vantagens" className="bg-brand-light py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+    <section id="vantagens" className="bg-brand-light py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/20">
             Vantagens
           </span>
-          <h2 className="mt-4 text-[40px] font-semibold leading-tight tracking-tight text-brand-black">
+          <h2 className="mt-4 text-[32px] font-semibold leading-tight tracking-tight text-brand-black sm:text-[40px]">
             Porquê escolher a Unifardas?
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
           {items.map(({ id, icon, title, alt, desc }) => (
             <div
               key={id}
-              className="group relative flex flex-col bg-white p-8 transition-colors hover:bg-brand-black"
+              className="group relative flex flex-col bg-white p-6 transition-colors hover:bg-brand-black sm:p-8"
             >
               <img src={icon} alt={alt} className="h-14 w-14" aria-hidden />
               <h3 className="mt-6 text-[22px] font-normal leading-none tracking-tight text-brand-black transition-colors group-hover:text-white">

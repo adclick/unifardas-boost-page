@@ -10,6 +10,13 @@ export const Route = createFileRoute("/obrigado")({
         name: "description",
         content: "Agradecemos o seu contacto. Será redirecionado para a nossa loja online.",
       },
+      { property: "og:title", content: "Obrigado pelo seu pedido — Unifardas" },
+      {
+        property: "og:description",
+        content: "Recebemos o seu pedido de orçamento e entraremos em contacto em breve.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: ObrigadoPage,

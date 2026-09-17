@@ -33,7 +33,7 @@ export function CookieConsent() {
         dismissed ? "translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6 py-5 lg:px-12">
+      <div className="mx-auto max-w-7xl px-5 py-5 sm:px-6 lg:px-12">
         <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-start gap-3">
             <Cookie className="mt-0.5 size-5 shrink-0 text-brand-red" />

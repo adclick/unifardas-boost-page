@@ -25,6 +25,7 @@ export const Route = createFileRoute("/")({
           "Fardas que valorizam a imagem da sua empresa. Produção nacional, personalização total e resposta em 24h.",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: LandingPage,
@@ -34,7 +35,7 @@ function LandingPage() {
   return (
     <div
       id="top"
-      className="min-h-screen bg-background font-sans text-brand-black selection:bg-brand-red selection:text-white"
+      className="min-h-screen overflow-x-clip bg-background font-sans text-brand-black selection:bg-brand-red selection:text-white"
     >
       <LandingHeader />
       <main className="">
@@ -55,25 +56,25 @@ function LandingPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent" />
           </div>
 
-          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 pt-20 pb-24 lg:grid-cols-12 lg:gap-12 lg:px-12 lg:pt-32 lg:pb-36">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pt-16 pb-16 sm:px-6 sm:pt-20 sm:pb-24 lg:grid-cols-12 lg:gap-12 lg:px-12 lg:pt-32 lg:pb-36">
             {/* Left: copy */}
             <div className="flex flex-col justify-between lg:col-span-7 text-white">
               <div>
                 <span className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-xs font-semibold text-white uppercase ring-1 ring-white/20">
                   Fardas profissionais personalizadas
                 </span>
-                <h1 className="mt-8 text-balance text-[48px] font-bold leading-[1.05] tracking-tight text-white">
+                <h1 className="mt-6 text-balance text-[40px] font-bold leading-[1.08] tracking-tight text-white sm:mt-8 sm:text-[48px]">
                   Fardas profissionais que{" "}
                   <span className="text-brand-red-bright">valorizam a imagem</span>{" "}
                   da sua empresa e acompanham o ritmo do seu negócio.
                 </h1>
-                <p className="mt-8 max-w-[55ch] text-pretty text-xl sm:text-2xl leading-relaxed text-white/90 font-light">
+                <p className="mt-6 max-w-[55ch] text-pretty text-lg font-light leading-relaxed text-white/90 sm:mt-8 sm:text-2xl">
                   Uniformes à medida com tecidos de alta qualidade, personalização
                   completa e entrega rápida em Portugal continental e ilhas.
                 </p>
               </div>
 
-              <div className="mt-12 lg:mt-0 flex flex-wrap items-stretch gap-3 text-white">
+              <div className="mt-10 grid grid-cols-1 gap-3 text-white min-[380px]:grid-cols-3 lg:mt-0">
                 {[
                   { Icon: Award, label: "30 anos" },
                   { Icon: Factory, label: "Produção nacional" },
@@ -81,10 +82,10 @@ function LandingPage() {
                 ].map(({ Icon, label }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3 rounded-lg border border-white/25 bg-white/10 px-4 py-3 backdrop-blur-sm"
+                    className="flex min-w-0 items-center gap-2 rounded-lg border border-white/25 bg-white/10 px-3 py-3 backdrop-blur-sm"
                   >
-                    <Icon className="size-6 shrink-0 text-brand-red-bright" strokeWidth={2} />
-                    <span className="text-sm font-semibold tracking-wide">
+                    <Icon className="size-5 shrink-0 text-brand-red-bright" strokeWidth={2} />
+                    <span className="min-w-0 text-xs font-semibold leading-tight">
                       {label}
                     </span>
                   </div>

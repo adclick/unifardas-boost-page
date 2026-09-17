@@ -38,15 +38,15 @@ export function TestimonialsCarousel() {
   }, [emblaApi]);
 
   return (
-    <section id="clientes" className="bg-brand-light py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+    <section id="clientes" className="bg-brand-light py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-12">
 
-      <div className="mb-8 flex items-end justify-between">
-        <div>
+      <div className="mb-8 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4">
+        <div className="min-w-0">
           <span className="inline-flex items-center gap-2 rounded-sm bg-brand-red/10 px-3 py-1.5 text-xs font-semibold text-brand-red uppercase ring-1 ring-brand-red/20">
             Clientes
           </span>
-          <h2 className="mt-2 text-[40px] font-semibold tracking-tight text-brand-black">
+          <h2 className="mt-2 text-[32px] font-semibold leading-tight tracking-tight text-brand-black sm:text-[40px]">
             O que os nossos clientes dizem
           </h2>
         </div>
@@ -68,7 +68,7 @@ export function TestimonialsCarousel() {
         </div>
       </div>
 
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="min-w-0 overflow-hidden" ref={emblaRef}>
         <div className="flex gap-6">
           {testimonials.map((t, i) => (
             <div
@@ -125,7 +125,7 @@ export function TestimonialsCarousel() {
         ))}
       </div>
 
-      <div className="mt-20 lg:mt-24">
+       <div className="mt-14 sm:mt-20 lg:mt-24">
         <ClientsMarquee />
       </div>
 
