@@ -6,7 +6,6 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { Loader2, ArrowRight } from "lucide-react";
 
-
 const schema = z
   .object({
     nome: z.string().trim().min(2, "Indique o seu nome").max(120),
@@ -33,9 +32,7 @@ const schema = z
     }),
   })
   .refine(
-    (data) =>
-      data.perfil !== "empresa" ||
-      (data.empresaNome !== undefined && data.empresaNome.trim().length >= 2),
+    (data) => data.perfil !== "empresa" || (data.empresaNome !== undefined && data.empresaNome.trim().length >= 2),
     {
       message: "Indique o nome da empresa",
       path: ["empresaNome"],
@@ -75,7 +72,7 @@ function buildWebhookPayload(values: FormValues): WebhookPayload {
     name: values.nome,
     email: values.email,
     profile: values.perfil === "empresa" ? "Empresa" : "Individual",
-	nif: values.nif,
+    nif: values.nif,
     message: values.pedido,
     source: "landing-page",
   };
@@ -133,7 +130,7 @@ export function QuoteForm() {
     submitLockRef.current = true;
     setSubmitting(true);
     try {
-      const res = await fetch("https://n8n.adc-services.eu/webhook/unifardas-wp-lead", {
+      const res = await fetch("https://n8n-main.adc-services.eu/webhook/unifardas-wp-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(buildWebhookPayload(values)),
@@ -155,22 +152,16 @@ export function QuoteForm() {
     }
   };
 
-
   const inputBase =
     "block w-full border-2 border-brand-light bg-white px-4 py-3 text-sm text-brand-black placeholder:text-brand-gray/60 focus:border-brand-red focus:outline-none transition-colors";
 
   return (
-    <div
-      id="orcamento"
-      className="overflow-hidden bg-white shadow-2xl shadow-black/40 ring-1 ring-black/5"
-    >
+    <div id="orcamento" className="overflow-hidden bg-white shadow-2xl shadow-black/40 ring-1 ring-black/5">
       <div className="bg-brand-red px-5 py-6 sm:px-7">
         <h3 className="text-[28px] font-bold leading-none tracking-tight text-white sm:text-[32px]">
           Peça o seu orçamento
         </h3>
-        <p className="mt-1 text-base text-white/85">
-          Resposta em menos de 24 horas úteis.
-        </p>
+        <p className="mt-1 text-base text-white/85">Resposta em menos de 24 horas úteis.</p>
       </div>
       <form
         className="space-y-5 p-5 sm:p-7"
@@ -181,10 +172,7 @@ export function QuoteForm() {
         noValidate
       >
         <div>
-          <label
-            htmlFor="nome"
-            className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
-          >
+          <label htmlFor="nome" className="block text-[11px] font-bold uppercase tracking-wider text-brand-black">
             Nome*
           </label>
           <input
@@ -195,15 +183,11 @@ export function QuoteForm() {
             {...register("nome")}
             className={`mt-2 ${inputBase}`}
           />
-          {errors.nome && (
-            <p className="mt-1 text-xs text-brand-red">{errors.nome.message}</p>
-          )}
+          {errors.nome && <p className="mt-1 text-xs text-brand-red">{errors.nome.message}</p>}
         </div>
 
         <div>
-          <span className="block text-[11px] font-bold uppercase tracking-wider text-brand-black">
-            Perfil*
-          </span>
+          <span className="block text-[11px] font-bold uppercase tracking-wider text-brand-black">Perfil*</span>
           <div className="mt-2 grid grid-cols-2 gap-2">
             {(
               [
@@ -216,9 +200,7 @@ export function QuoteForm() {
                 <button
                   type="button"
                   key={opt.v}
-                  onClick={() =>
-                    setValue("perfil", opt.v, { shouldValidate: true })
-                  }
+                  onClick={() => setValue("perfil", opt.v, { shouldValidate: true })}
                   className={`cursor-pointer border-2 py-3 text-sm transition-all ${
                     active
                       ? "border-brand-red bg-brand-red/10 text-brand-red"
@@ -250,17 +232,10 @@ export function QuoteForm() {
                 {...register("empresaNome")}
                 className={`mt-2 ${inputBase}`}
               />
-              {errors.empresaNome && (
-                <p className="mt-1 text-xs text-brand-red">
-                  {errors.empresaNome.message}
-                </p>
-              )}
+              {errors.empresaNome && <p className="mt-1 text-xs text-brand-red">{errors.empresaNome.message}</p>}
             </div>
             <div>
-              <label
-                htmlFor="nif"
-                className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
-              >
+              <label htmlFor="nif" className="block text-[11px] font-bold uppercase tracking-wider text-brand-black">
                 NIF
               </label>
               <input
@@ -271,21 +246,14 @@ export function QuoteForm() {
                 {...register("nif")}
                 className={`mt-2 ${inputBase}`}
               />
-              {errors.nif && (
-                <p className="mt-1 text-xs text-brand-red">
-                  {errors.nif.message}
-                </p>
-              )}
+              {errors.nif && <p className="mt-1 text-xs text-brand-red">{errors.nif.message}</p>}
             </div>
           </div>
         )}
 
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label
-              htmlFor="telefone"
-              className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
-            >
+            <label htmlFor="telefone" className="block text-[11px] font-bold uppercase tracking-wider text-brand-black">
               Telefone
             </label>
             <input
@@ -296,17 +264,10 @@ export function QuoteForm() {
               {...register("telefone")}
               className={`mt-2 ${inputBase}`}
             />
-            {errors.telefone && (
-              <p className="mt-1 text-xs text-brand-red">
-                {errors.telefone.message}
-              </p>
-            )}
+            {errors.telefone && <p className="mt-1 text-xs text-brand-red">{errors.telefone.message}</p>}
           </div>
           <div>
-            <label
-              htmlFor="email"
-              className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
-            >
+            <label htmlFor="email" className="block text-[11px] font-bold uppercase tracking-wider text-brand-black">
               E-mail*
             </label>
             <input
@@ -317,19 +278,12 @@ export function QuoteForm() {
               {...register("email")}
               className={`mt-2 ${inputBase}`}
             />
-            {errors.email && (
-              <p className="mt-1 text-xs text-brand-red">
-                {errors.email.message}
-              </p>
-            )}
+            {errors.email && <p className="mt-1 text-xs text-brand-red">{errors.email.message}</p>}
           </div>
         </div>
 
         <div>
-          <label
-            htmlFor="pedido"
-            className="block text-[11px] font-bold uppercase tracking-wider text-brand-black"
-          >
+          <label htmlFor="pedido" className="block text-[11px] font-bold uppercase tracking-wider text-brand-black">
             Faça o seu pedido*
           </label>
           <textarea
@@ -339,11 +293,7 @@ export function QuoteForm() {
             {...register("pedido")}
             className={`mt-2 resize-none ${inputBase}`}
           />
-          {errors.pedido && (
-            <p className="mt-1 text-xs text-brand-red">
-              {errors.pedido.message}
-            </p>
-          )}
+          {errors.pedido && <p className="mt-1 text-xs text-brand-red">{errors.pedido.message}</p>}
         </div>
 
         <label className="flex cursor-pointer items-start gap-3">
@@ -363,22 +313,14 @@ export function QuoteForm() {
             e o tratamento dos meus dados para fins de contacto comercial.*
           </span>
         </label>
-        {errors.consentimento && (
-          <p className="-mt-3 text-xs text-brand-red">
-            {errors.consentimento.message}
-          </p>
-        )}
+        {errors.consentimento && <p className="-mt-3 text-xs text-brand-red">{errors.consentimento.message}</p>}
 
         <button
           type="submit"
           disabled={submitting || !consentimento}
           className="inline-flex w-full items-center justify-center gap-2 bg-brand-red py-4 text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-brand-red/90 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
         >
-          {submitting ? (
-            <Loader2 className="size-4 animate-spin" />
-          ) : (
-            <ArrowRight className="size-4" />
-          )}
+          {submitting ? <Loader2 className="size-4 animate-spin" /> : <ArrowRight className="size-4" />}
           {submitting ? "A enviar..." : "Enviar pedido"}
         </button>
       </form>
