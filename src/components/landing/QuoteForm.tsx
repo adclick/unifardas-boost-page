@@ -52,20 +52,16 @@ type WebhookPayload = {
   message: string;
   campaign?: string;
   source: "landing-page";
-  fields?: {
-    utm_source?: string;
-    utm_medium?: string;
-    utm_campaign?: string;
-  };
+  fields?: Record<string, string>;
 };
 
 function buildWebhookPayload(values: FormValues): WebhookPayload {
   const params = new URLSearchParams(window.location.search);
 
-  const fields: WebhookPayload["fields"] = {};
-  for (const key of ["utm_source", "utm_medium", "utm_campaign"] as const) {
-    const value = params.get(key)?.trim();
-    if (value) fields[key] = value;
+  const fields: Record<string, string> = {};
+  for (const [key, rawValue] of params) {
+    const value = rawValue.trim();
+    if (value && !(key in fields)) fields[key] = value;
   }
 
   const payload: WebhookPayload = {
